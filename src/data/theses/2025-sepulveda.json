@@ -98,5 +98,6 @@
     "en": "It uses public consumer protection data and provides evidence on how companies handle food safety complaints, with implications for consumers and regulation, but the focus is on the business effectiveness of responses."
   },
   "repositoryUrl": "https://repositorio.uchile.cl/handle/2250/207953",
+  "pdfUrl": "/pdf/2025-sepulveda.pdf",
   "notes": "El texto tiene inconsistencias internas: la síntesis de P4 reporta 720 reclamos de seguridad alimentaria con 45/32/23 % de estrategias y notas 3,4/2,7/2,1, mientras que la sección correspondiente reporta 72 casos, 26,1 % evasivas, 73,9 % técnicas y cero transparentes (se usó esta última versión en los highlights). La base completa aparece como 5.465 y también como 5.468 evaluaciones. Hay párrafos duplicados en la sección de seguridad alimentaria y dos secciones tituladas Conclusiones. El OE5 se cita en la metodología pero no está en la lista de objetivos. No se nombra explícitamente el lenguaje de programación; el anexo muestra prompts en sintaxis tipo Python (SYSTEM_CONTENT = \"\"\"...\"\"\"). Declara uso de Claude, ChatGPT y Gemini para mejorar la redacción."
 }

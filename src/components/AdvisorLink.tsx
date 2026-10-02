@@ -7,7 +7,7 @@ export default function AdvisorLink({ id, full = false, className = '' }: { id: 
   const { language } = useLanguage()
   const a = ADVISORS[id]
   if (!a) return <span className={className}>{id}</span>
-  const label = full ? a.name : shortName(a.name)
+  const label = full ? `${a.name}${a.faculty && a.faculty !== 'externo' ? ` (${a.faculty})` : ''}` : shortName(a.name)
   const title = language === 'en' ? a.affiliationEn : a.affiliationEs
   if (!a.url) return <span className={className} title={title}>{label}</span>
   return (

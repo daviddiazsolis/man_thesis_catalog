@@ -95,5 +95,6 @@
     "en": "The thesis improves revenue forecasting for a private B2B technology company for commercial and financial planning, with no evident social externality."
   },
   "repositoryUrl": null,
+  "pdfUrl": "/pdf/2026-celedon.pdf",
   "notes": "La tesis aplica además AR, MA, ARMA, ARIMA, Random Forest, HistGradientBoosting, Elastic Net, Naive Seasonal, Diebold-Mariano con Newey-West y Holm, Model Confidence Set con bootstrap estacionario y pruebas ADF, KPSS y Ljung-Box; se omitieron de techniques por el límite de 10. La organización no se nombra en el texto. El texto incluye dedicatoria y agradecimientos extensos con nombres personales."
 }

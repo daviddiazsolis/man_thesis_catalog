@@ -98,5 +98,6 @@
     "en": "The thesis addresses a public policy and political decision problem: anticipating presidential outcomes from official open electoral data, offering a reproducible alternative to opinion polls for political organizations, public institutions and analysts."
   },
   "repositoryUrl": null,
+  "pdfUrl": "/pdf/2026-delrio.pdf",
   "notes": "Tesis fechada 2026 (Actividad Formativa Equivalente), profesor guía Charles Thraves. Las predicciones sobre 2025 son retrospectivas: el resultado ya era conocido y la asignación manual de ese ciclo se ajustó al resultado observado (sesgo retrospectivo declarado por el autor). El modelo Beta=0 no alcanza optimalidad certificada en CBC y no es replicable entre corridas. Los anexos del texto solo contienen nombres de figuras, sin contenido."
 }

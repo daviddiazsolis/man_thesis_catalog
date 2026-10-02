@@ -38,7 +38,7 @@ sheet(ws,
    'Resumen ejecutivo (ES)', 'Executive summary (EN)',
    'Highlight 1 (ES)', 'Highlight 2 (ES)', 'Highlight 3 (ES)', 'Highlight 4 (ES)', 'Highlight 5 (ES)',
    'Highlight 1 (EN)', 'Highlight 2 (EN)', 'Highlight 3 (EN)', 'Highlight 4 (EN)', 'Highlight 5 (EN)',
-   'URL repositorio U. de Chile', 'Notas'],
+   'URL repositorio U. de Chile', 'PDF en el sitio', 'Notas'],
   [[t['id'], t['status'], t['authorization'], t['student'], t['cohort'], t['program'], t['defenseDate'], t['defenseYear'],
     name(t['advisor']), name(t['coAdvisor']) if t['coAdvisor'] else '', j([name(c) for c in t['committee']]),
     t['title']['es'], t['title']['en'], j(t['domain']), j(t['taskTypes']), j(t['techniques']), j(t['tools']),
@@ -47,8 +47,8 @@ sheet(ws,
     t['socialImpact']['level'], t['socialImpact']['es'], t['socialImpact']['en'],
     j(t['keywords']['es']), j(t['keywords']['en']), t['abstract']['es'], t['abstract']['en'],
     *(t['highlights']['es'] + [''] * 5)[:5], *(t['highlights']['en'] + [''] * 5)[:5],
-    t['repositoryUrl'] or '', t.get('notes') or ''] for t in theses],
-  [16, 9, 12, 28, 10, 9, 12, 8, 26, 22, 30, 50, 50, 20, 26, 40, 24, 50, 10, 30, 12, 45, 45, 35, 35, 80, 80] + [45] * 10 + [40, 40])
+    t['repositoryUrl'] or '', ('https://man-thesis-catalog.vercel.app' + t['pdfUrl']) if t.get('pdfUrl') else '', t.get('notes') or ''] for t in theses],
+  [16, 9, 12, 28, 10, 9, 12, 8, 26, 22, 30, 50, 50, 20, 26, 40, 24, 50, 10, 30, 12, 45, 45, 35, 35, 80, 80] + [45] * 10 + [40, 40, 40])
 
 ws2 = wb.create_sheet('Datasets')
 sheet(ws2, ['ID tesis', 'Alumno/a', 'Dataset (ES)', 'Dataset (EN)', 'Fuente', 'Público', 'URL', 'Tamaño'],

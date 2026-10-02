@@ -5,3 +5,6 @@ dist/
 .DS_Store
 gen/_txt/
 gen/_pendientes/
+
+.vercel
+.env*

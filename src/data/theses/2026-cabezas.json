@@ -92,5 +92,6 @@
     "en": "The thesis directly addresses a public policy problem: the decline in birth rates and its socioeconomic determinants, proposing the model as a tool for evidence-based policy decisions."
   },
   "repositoryUrl": null,
+  "pdfUrl": "/pdf/2026-cabezas.pdf",
   "notes": "El texto extraído comienza en el capítulo de metodología: no incluye portada, resumen, introducción ni marco teórico. Hay inconsistencia en el período de datos (1998-2023 en la descripción del enfoque, 1960-2023 en resultados). Las tablas y gráficos no están en el texto, por lo que no se dispone de RMSE ni de métricas de Random Forest en prueba."
 }

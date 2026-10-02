@@ -106,5 +106,6 @@
     "en": "The thesis aims to reduce the waste of raw materials, water, energy and emissions linked to failed test batches in craft breweries, an environmental and efficiency benefit derived from a commercial application."
   },
   "repositoryUrl": "https://repositorio.uchile.cl/handle/2250/207929",
+  "pdfUrl": "/pdf/2025-ceroni.pdf",
   "notes": "Documento rotulado como Taller AFE, Informe 3 (AFE para optar al grado), profesor guía Richard Weber, 2025. Resumen ejecutivo en español e inglés incluido. Las tablas y gráficos aparecen como texto al final. Inconsistencia menor: el texto dice que todos los R cuadrado por estilo superan 0,82, pero la tabla muestra Witbier con 0,77. Los modelos de clasificación (KNN, Random Forest, redes neuronales, SVM) se probaron como análisis alternativo y se descartaron."
 }

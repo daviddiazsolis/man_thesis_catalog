@@ -113,5 +113,6 @@
     "en": "The application is commercial (annuity pricing and reserving), but better mortality estimation protects reserve adequacy and allows fairer prices for pensioners."
   },
   "repositoryUrl": "https://repositorio.uchile.cl/handle/2250/207957",
+  "pdfUrl": "/pdf/2025-yanez.pdf",
   "notes": "Informe final fechado en enero de 2025. El texto extraído perdió las ecuaciones y los contenidos de varias figuras y tablas; algunas tablas de resultados (A/E mensuales 2024) solo aparecen como títulos. Se detecta una inconsistencia menor: el MSE 824,35 se reporta para GRU y luego se atribuye a LSTM y GRU en conjunto. El autor no entrega el MSE numérico del LSTM de serie temporal."
 }

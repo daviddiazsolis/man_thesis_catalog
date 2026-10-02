@@ -51,6 +51,7 @@ export interface Advisor {
   affiliationEn: string
   url: string | null
   urlType: 'institutional' | 'personal' | 'scholar' | 'linkedin' | null
+  faculty?: 'FEN' | 'FCFM' | 'externo'
 }
 
 export const ADVISORS: Record<string, Advisor> = advisorsRaw as Record<string, Advisor>

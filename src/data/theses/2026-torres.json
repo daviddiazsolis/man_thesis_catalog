@@ -113,5 +113,6 @@
     "en": "The thesis directly addresses a political and electoral behavior problem: it delivers a replicable pipeline on public data to anticipate presidential results and to understand split-ticket voting and incumbency fatigue."
   },
   "repositoryUrl": null,
+  "pdfUrl": "/pdf/2026-torres.pdf",
   "notes": "Las secciones referidas en la discusión (8.2.5, 8.2.6, 8.3.2) no coinciden con la numeración del informe. Hay inconsistencias menores en cifras entre secciones: el coeficiente de pct_diputados aparece como +0,2037 en la tabla OLS y +0,279 en conclusiones; la importancia de XGBoost se cita como 0,45 en conclusiones pero 0,188 por gain en la tabla. Año en portada: 2026."
 }

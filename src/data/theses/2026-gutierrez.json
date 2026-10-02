@@ -111,5 +111,6 @@
     "en": "The thesis directly addresses capacity planning in the public health system of the Los Lagos Region, aiming to anticipate respiratory emergency peaks to reduce saturation and waiting times for the user population."
   },
   "repositoryUrl": null,
+  "pdfUrl": "/pdf/2026-gutierrez.pdf",
   "notes": "Trabajo orientado a los Servicios de Salud Reloncaví, Chiloé y Osorno como contraparte institucional, pero los datos usados son públicos (DEIS) y no se declara convenio formal, por lo que organization se deja en null. La valorización económica (396 a 793 millones de pesos anuales) es un ejercicio ilustrativo, no un resultado del modelo. Fecha de la portada: junio 2026; profesor guía Richard Weber."
 }

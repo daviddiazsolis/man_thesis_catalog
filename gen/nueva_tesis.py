@@ -1,9 +1,10 @@
 """Prepara una tesis nueva para el catálogo.
 
 1) Extrae el texto del PDF o DOCX a gen/_pendientes/<slug>.txt (carpeta ignorada por git).
-2) Crea gen/_pendientes/<slug>.prompt.md con las instrucciones para que Claude genere la ficha
+2) Copia el PDF a public/pdf/<año>-<slug>.pdf (si es DOCX lo convierte con LibreOffice: soffice --headless --convert-to pdf).
+3) Crea gen/_pendientes/<slug>.prompt.md con las instrucciones para que Claude genere la ficha
    (abstract ES/EN, 5 highlights ES/EN, datasets, técnicas, impacto social) siguiendo gen/ESQUEMA.md.
-3) Crea el esqueleto src/data/theses/<año>-<slug>.json con los datos administrativos que se pasan por argumento.
+4) Crea el esqueleto src/data/theses/<año>-<slug>.json con los datos administrativos que se pasan por argumento.
 
 Uso (PowerShell, desde la raíz del repo):
   python gen/nueva_tesis.py "C:\ruta\tesis.pdf" --slug apellido --student "Nombre Apellido" --cohort 2024 `
@@ -48,13 +49,28 @@ year = int(a.defense[:4]); tid = f'{year}-{a.slug}'
 status = 'public' if a.authorization.upper().startswith('INMEDIATO') else ('pending' if a.authorization == '' else 'embargoed')
 open(os.path.join(PEND, f'{a.slug}.txt'), 'w', encoding='utf-8').write(txt)
 
+# PDF público (solo si la tesis es publicable)
+pdf_url = None
+if status == 'public':
+    import shutil
+    pdf_dir = os.path.join(ROOT, 'public', 'pdf'); os.makedirs(pdf_dir, exist_ok=True)
+    dst = os.path.join(pdf_dir, f'{tid}.pdf')
+    if a.file.lower().endswith('.pdf'):
+        shutil.copyfile(a.file, dst)
+    else:
+        r = subprocess.run(['soffice', '--headless', '--convert-to', 'pdf', '--outdir', PEND, a.file], capture_output=True, text=True)
+        conv = os.path.join(PEND, os.path.splitext(os.path.basename(a.file))[0] + '.pdf')
+        if os.path.exists(conv): shutil.move(conv, dst)
+        else: print('AVISO: no se pudo convertir a PDF con LibreOffice; copia el PDF a mano en', dst)
+    if os.path.exists(dst): pdf_url = f'/pdf/{tid}.pdf'
+
 skeleton = {
   'id': tid, 'status': status, 'authorization': a.authorization, 'student': a.student, 'cohort': a.cohort,
   'program': a.program, 'defenseDate': a.defense, 'defenseYear': year, 'advisor': a.advisor, 'coAdvisor': a.co,
   'committee': [c for c in a.committee.split(',') if c],
   'title': {'es': '', 'en': ''}, 'abstract': {'es': '', 'en': ''}, 'highlights': {'es': [], 'en': []},
   'keywords': {'es': [], 'en': []}, 'domain': [], 'taskTypes': [], 'techniques': [], 'tools': [], 'datasets': [],
-  'organization': None, 'socialImpact': {'level': 'none', 'es': '', 'en': ''}, 'repositoryUrl': None, 'notes': None,
+  'organization': None, 'socialImpact': {'level': 'none', 'es': '', 'en': ''}, 'repositoryUrl': None, 'pdfUrl': pdf_url, 'notes': None,
 }
 out = os.path.join(ROOT, 'src/data/theses', f'{tid}.json')
 if os.path.exists(out): sys.exit(f'Ya existe {out}; bórralo primero si quieres regenerarlo.')

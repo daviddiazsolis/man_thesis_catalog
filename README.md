@@ -1,6 +1,6 @@
 # Catálogo de Tesis MAN · FEN Universidad de Chile
 
-Catálogo público de las tesis (Actividad Formativa Equivalente) del Magíster en Analítica de Negocios, programa conjunto FEN y FCFM de la Universidad de Chile. Para cada tesis: resumen ejecutivo y highlights en español e inglés, datasets, técnicas de machine learning, profesor guía (con enlace a su página institucional), clasificación de impacto social y enlace al repositorio académico de la Universidad de Chile. Filtros por año de defensa, generación, profesor guía, sector, tipo de problema, técnica, impacto social y tipo de datos.
+Catálogo público de las tesis (Actividad Formativa Equivalente) del Magíster en Analítica de Negocios, programa interfacultades de la Universidad de Chile: Facultad de Economía y Negocios (FEN, departamentos de Administración, Control de Gestión y Sistemas de Información, y Economía) y Facultad de Ciencias Físicas y Matemáticas (FCFM, Departamento de Ingeniería Industrial). Para cada tesis: resumen ejecutivo y highlights en español e inglés, datasets, técnicas de machine learning, profesor guía (con enlace a su página institucional), clasificación de impacto social y enlace al repositorio académico de la Universidad de Chile. Filtros por año de defensa, generación, profesor guía, sector, tipo de problema, técnica, impacto social y tipo de datos.
 
 Solo se incluyen tesis cuyos autores autorizaron la publicación. Ver `CLAUDE.md` para el flujo de mantenimiento y `gen/PENDIENTES.md` para las tesis con embargo.
 

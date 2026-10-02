@@ -145,5 +145,6 @@
     "en": "The thesis directly addresses a public-information access problem: it unlocks cadastral data that are formally public but inaccessible and distributes them free of charge to researchers, municipalities, journalists and citizens, reducing information asymmetry in the real estate market."
   },
   "repositoryUrl": null,
+  "pdfUrl": "/pdf/2026-hernandez.pdf",
   "notes": "La portada indica 'Borrador Final' (abril 2026). Es una tesis de ingeniería de datos geoespaciales y producto (plataformas Catastral.cl y combustible.tremen.tech), no de modelamiento predictivo: no se entrenan modelos de ML; CLIP se usa como clasificador satelital preentrenado en el caso aplicado. El texto menciona Newmark Chile 'en el Capítulo 1' pero ese contexto no aparece en el documento. Algunas referencias cruzadas de sección son inconsistentes (p.ej. 'Sección 4.2.2' por 7.4.2)."
 }

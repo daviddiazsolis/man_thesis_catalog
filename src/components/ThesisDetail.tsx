@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: Apache-2.0
 import { useEffect, useState } from 'react'
 import { motion } from 'motion/react'
-import { X, ExternalLink, Link2, Check, Calendar, Users, Database, Cpu, Wrench, Tag, Building2, Languages, Search } from 'lucide-react'
+import { X, ExternalLink, Link2, Check, Calendar, Users, Database, Cpu, Wrench, Tag, Building2, Languages, Search, FileDown } from 'lucide-react'
 import { useLanguage } from '../context/LanguageContext'
 import { domainLabel, taskLabel } from '../i18n'
 import { repositorySearchUrl, type Thesis, type Lang } from '../data'
@@ -128,9 +128,15 @@ export default function ThesisDetail({ thesis: th, onClose }: { thesis: Thesis; 
               <p className="text-xs text-muted leading-relaxed">{th.keywords[textLang].join(' · ')}</p>
             </Section>
             <div className="pt-2 border-t border-line space-y-2">
+              {th.pdfUrl && (
+                <a href={th.pdfUrl} target="_blank" rel="noopener noreferrer" download
+                  className="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-xl bg-accent text-accent-fg text-sm font-semibold hover:opacity-90">
+                  <FileDown className="w-4 h-4" />{t('downloadPdf')}
+                </a>
+              )}
               {th.repositoryUrl ? (
                 <a href={th.repositoryUrl} target="_blank" rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-xl bg-accent text-accent-fg text-sm font-semibold hover:opacity-90">
+                  className="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-xl border border-accent text-accent text-sm font-semibold hover:bg-accent-soft">
                   <ExternalLink className="w-4 h-4" />{t('repoLink')}
                 </a>
               ) : (

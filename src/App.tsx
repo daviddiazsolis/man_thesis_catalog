@@ -25,7 +25,7 @@ function NavBar() {
     <header className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${scrolled ? 'bg-bg/90 backdrop-blur border-b border-line py-3' : 'py-5'}`}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between pl-40 sm:pl-44">
         <a href="#" className={`font-black text-lg tracking-tight ${scrolled ? 'text-fg' : 'text-white'}`}>
-          MAN<span className="text-fen-gold">/</span>FEN
+          MAN<span className="text-fen-gold">·</span>FEN<span className="text-fen-gold">+</span>FCFM
           <span className={`font-normal text-sm ml-2 hidden sm:inline ${scrolled ? 'text-muted' : 'text-white/70'}`}>Universidad de Chile</span>
         </a>
         <nav className="hidden sm:flex items-center gap-1">

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-import { ExternalLink, Calendar, Database, ArrowUpRight } from 'lucide-react'
+import { ExternalLink, Calendar, Database, ArrowUpRight, FileDown } from 'lucide-react'
 import { useLanguage } from '../context/LanguageContext'
 import { domainLabel } from '../i18n'
 import type { Thesis } from '../data'
@@ -37,6 +37,10 @@ export default function ThesisCard({ thesis: th, onOpen }: { thesis: Thesis; onO
       <div className="mt-auto pt-3 border-t border-line flex items-center justify-between text-xs">
         <span className="inline-flex items-center gap-1 text-muted"><Database className="w-3 h-3" />{th.datasets.length} · {anyPublic ? t('publicData') : t('privateData')}</span>
         <span className="inline-flex items-center gap-2">
+          {th.pdfUrl && (
+            <a href={th.pdfUrl} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()} title={t('downloadPdf')}
+              className="inline-flex items-center gap-0.5 text-muted hover:text-accent"><FileDown className="w-3.5 h-3.5" />{t('downloadShort')}</a>
+          )}
           {th.repositoryUrl && (
             <a href={th.repositoryUrl} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()} title={t('repoLink')}
               className="text-muted hover:text-accent"><ExternalLink className="w-3.5 h-3.5" /></a>

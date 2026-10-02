@@ -99,5 +99,6 @@
     "en": "The application is commercial (fund management, debt issuance and investment), but anticipating mass redemptions helps reduce liquidity risk and fire sales, which contributes to the stability of the Chilean financial system."
   },
   "repositoryUrl": "https://repositorio.uchile.cl/handle/2250/207933",
+  "pdfUrl": "/pdf/2025-gajardo.pdf",
   "notes": "El texto no nombra explícitamente el lenguaje; se infiere Python por las referencias a MinMaxScaler, seasonal_decompose, DataFrame, Adam y EarlyStopping. Se menciona que el modelo se orienta a un portfolio manager de un banco de inversión, pero no se identifica ninguna organización. Las tablas de machine learning (5 a 10) reportan RMSE pero el texto las llama repetidamente 'rentabilidad', lo que genera confusión; el resumen ejecutivo repite ese uso. Hay dos tablas numeradas como Tabla 2 y los gráficos ARIMA/SARIMAX y los boxplots del anexo no se extrajeron del PDF."
 }

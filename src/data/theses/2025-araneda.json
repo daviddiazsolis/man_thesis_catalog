@@ -103,5 +103,6 @@
     "en": "Commercial application on public data with a derived benefit for consumers: the methodology helps anticipate dissatisfaction and improve delivery compliance and the accuracy of product descriptions."
   },
   "repositoryUrl": "https://repositorio.uchile.cl/handle/2250/207923",
+  "pdfUrl": "/pdf/2025-araneda.pdf",
   "notes": "El texto extraído no incluye las tablas en su lugar original: aparecen al final en formato de columnas separadas por barras verticales. El lenguaje Python no se menciona de forma explícita; se infiere por las librerías citadas (scikit-learn, transformers de Hugging Face, pysentimiento). Se evaluaron además BETO (nlptown), TextBlob y VADER como modelos de sentimiento, descartados por menor desempeño. Fecha de la portada: junio 2025."
 }

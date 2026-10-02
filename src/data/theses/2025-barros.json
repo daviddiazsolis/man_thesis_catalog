@@ -102,5 +102,6 @@
     "en": "The thesis directly addresses an education policy problem: the efficiency and equity of Chilean public and subsidized schools, incorporating school climate and vulnerability, and closes with public policy recommendations."
   },
   "repositoryUrl": "https://repositorio.uchile.cl/handle/2250/207928",
+  "pdfUrl": "/pdf/2025-barros.pdf",
   "notes": "La portada del texto extraído dice 'Determinación de las variables que explican eficiencia en establecimientos educacionales de Chile' (2025, profesora guía Felix Lizama); se usó el título oficial entregado. El resumen ejecutivo es más bien una declaración de objetivos; las cifras provienen de los capítulos de resultados y anexos. El tamaño de la muestra (912) se infiere de la tabla descriptiva del anexo 5 (valores únicos de DMU), no se declara explícitamente. Hay inconsistencias internas sobre el signo del efecto de la razón de horas de aula por alumno: el cuerpo y el anexo 10 lo describen como inverso, mientras el análisis por cuartiles y el anexo 9 lo describen como positivo. Las métricas se denominan 'de clasificación' aunque el problema es de regresión. Más de la mitad del texto son anexos con descripciones de gráficos SHAP."
 }

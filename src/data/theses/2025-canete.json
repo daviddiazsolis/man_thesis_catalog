@@ -119,5 +119,6 @@
     "en": "The application is internal to a company and aimed at HR management efficiency, but it yields a derived benefit for employees by targeting retention interventions and avoiding ineffective or counterproductive actions."
   },
   "repositoryUrl": "https://repositorio.uchile.cl/handle/2250/210195",
+  "pdfUrl": "/pdf/2025-canete.pdf",
   "notes": "La empresa no se nombra, aunque las gerencias listadas en el anexo (Transporte de Pasajeros, Extensiones, Obras Civiles) y la categoría de sindicato S_Metro sugieren un operador de transporte urbano. El texto no menciona lenguaje ni librerías. Hay una inconsistencia de signo: la metodología define persuasibles con uplift positivo, pero en los resultados los persuasibles son los de uplift score menor a -0,05 (moda en -1,0), ya que el outcome es la renuncia. La tabla 4 y el gráfico 8 están en anexos; los gráficos no se recuperan en el texto extraído."
 }

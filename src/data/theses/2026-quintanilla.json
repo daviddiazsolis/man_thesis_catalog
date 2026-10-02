@@ -114,5 +114,6 @@
     "en": "The thesis directly addresses a public policy problem: transparency, efficiency and price comparability in Chilean government purchasing, and proposes a redesign of the Compra Ágil form aimed at ChileCompra and purchasing units."
   },
   "repositoryUrl": null,
+  "pdfUrl": "/pdf/2026-quintanilla.pdf",
   "notes": "El texto incluye resumen ejecutivo y abstract. Las tablas aparecen al final del archivo, separadas de sus títulos en el cuerpo. No se nombra una contraparte institucional formal: se usan fuentes públicas de ChileCompra sin convenio con una organización. El modelo 'es-specific' se menciona sin nombre completo. Los LLMs con prompts se mencionan solo como trabajo futuro, no se aplican."
 }
