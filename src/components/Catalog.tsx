@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-import { useMemo, useState, useEffect } from 'react'
+import { useMemo, useState, useEffect, useLayoutEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { Search, X, SlidersHorizontal, ChevronDown } from 'lucide-react'
 import { useLanguage } from '../context/LanguageContext'
@@ -77,6 +77,18 @@ export default function Catalog() {
   const [open, setOpen] = useState<Thesis | null>(null)
   const [mobileFilters, setMobileFilters] = useState(false)
 
+  // Al cambiar filtros la grilla cambia de alto y el navegador puede re-posicionar el scroll
+  // (sobre todo si la URL trae un #ancla): se conserva la posición de scroll del usuario.
+  const scrollRef = useRef<number | null>(null)
+  const updateFilters = (next: Filters) => {
+    scrollRef.current = window.scrollY
+    if (window.location.hash && !window.location.hash.startsWith('#tesis=')) history.replaceState(null, '', window.location.pathname)
+    setF(next)
+  }
+  useLayoutEffect(() => {
+    if (scrollRef.current !== null) { window.scrollTo({ top: scrollRef.current, behavior: 'instant' as ScrollBehavior }); scrollRef.current = null }
+  }, [f, sort])
+
   // Deep link: #tesis=<id>
   useEffect(() => {
     const read = () => {
@@ -105,29 +117,29 @@ export default function Catalog() {
 
   const panel = (
     <div className="space-y-5">
-      <Group label={t('fYear')}>{ALL_YEARS.map(y => <Chip key={y} active={f.years.includes(y)} onClick={() => setF({ ...f, years: toggle(f.years, y) })}>{y}</Chip>)}</Group>
-      <Group label={t('fCohort')}>{ALL_COHORTS.map(y => <Chip key={y} active={f.cohorts.includes(y)} onClick={() => setF({ ...f, cohorts: toggle(f.cohorts, y) })}>{y}</Chip>)}</Group>
-      <Group label={t('fAdvisor')}>{ALL_ADVISORS.map(a => <Chip key={a} active={f.advisors.includes(a)} onClick={() => setF({ ...f, advisors: toggle(f.advisors, a) })}>{advisorName(a)}</Chip>)}</Group>
+      <Group label={t('fYear')}>{ALL_YEARS.map(y => <Chip key={y} active={f.years.includes(y)} onClick={() => updateFilters({ ...f, years: toggle(f.years, y) })}>{y}</Chip>)}</Group>
+      <Group label={t('fCohort')}>{ALL_COHORTS.map(y => <Chip key={y} active={f.cohorts.includes(y)} onClick={() => updateFilters({ ...f, cohorts: toggle(f.cohorts, y) })}>{y}</Chip>)}</Group>
+      <Group label={t('fAdvisor')}>{ALL_ADVISORS.map(a => <Chip key={a} active={f.advisors.includes(a)} onClick={() => updateFilters({ ...f, advisors: toggle(f.advisors, a) })}>{advisorName(a)}</Chip>)}</Group>
       <Group label={t('fImpact')}>
         {(['direct', 'indirect', 'none'] as ImpactLevel[]).map(l => (
-          <Chip key={l} active={f.impact.includes(l)} onClick={() => setF({ ...f, impact: toggle(f.impact, l) })}>
+          <Chip key={l} active={f.impact.includes(l)} onClick={() => updateFilters({ ...f, impact: toggle(f.impact, l) })}>
             {t(l === 'direct' ? 'impactDirect' : l === 'indirect' ? 'impactIndirect' : 'impactNone')}
           </Chip>))}
       </Group>
       <Group label={t('fData')}>
         {(['any', 'public', 'private'] as DataFilter[]).map(d => (
-          <Chip key={d} active={f.data === d} onClick={() => setF({ ...f, data: d })}>{t(d === 'any' ? 'dataAny' : d === 'public' ? 'dataPublic' : 'dataPrivate')}</Chip>))}
+          <Chip key={d} active={f.data === d} onClick={() => updateFilters({ ...f, data: d })}>{t(d === 'any' ? 'dataAny' : d === 'public' ? 'dataPublic' : 'dataPrivate')}</Chip>))}
       </Group>
-      <Group label={t('fDomain')}>{ALL_DOMAINS.map(d => <Chip key={d} active={f.domains.includes(d)} onClick={() => setF({ ...f, domains: toggle(f.domains, d) })}>{domainLabel(d, language)}</Chip>)}</Group>
-      <Group label={t('fTask')}>{ALL_TASKS.map(d => <Chip key={d} active={f.tasks.includes(d)} onClick={() => setF({ ...f, tasks: toggle(f.tasks, d) })}>{taskLabel(d, language)}</Chip>)}</Group>
+      <Group label={t('fDomain')}>{ALL_DOMAINS.map(d => <Chip key={d} active={f.domains.includes(d)} onClick={() => updateFilters({ ...f, domains: toggle(f.domains, d) })}>{domainLabel(d, language)}</Chip>)}</Group>
+      <Group label={t('fTask')}>{ALL_TASKS.map(d => <Chip key={d} active={f.tasks.includes(d)} onClick={() => updateFilters({ ...f, tasks: toggle(f.tasks, d) })}>{taskLabel(d, language)}</Chip>)}</Group>
       <Group label={t('fTechnique')}>
-        {techShown.map(d => <Chip key={d} active={f.techniques.includes(d)} onClick={() => setF({ ...f, techniques: toggle(f.techniques, d) })}>{d}</Chip>)}
+        {techShown.map(d => <Chip key={d} active={f.techniques.includes(d)} onClick={() => updateFilters({ ...f, techniques: toggle(f.techniques, d) })}>{d}</Chip>)}
         <button onClick={() => setShowTech(s => !s)} className="px-2.5 py-1 rounded-lg text-xs text-accent font-medium inline-flex items-center gap-1">
           {showTech ? '−' : `+${ALL_TECHNIQUES.length - techShown.length}`} <ChevronDown className={`w-3 h-3 transition-transform ${showTech ? 'rotate-180' : ''}`} />
         </button>
       </Group>
       {active > 0 && (
-        <button onClick={() => setF(EMPTY)} className="inline-flex items-center gap-1 text-xs font-semibold text-accent hover:underline">
+        <button onClick={() => updateFilters(EMPTY)} className="inline-flex items-center gap-1 text-xs font-semibold text-accent hover:underline">
           <X className="w-3 h-3" /> {t('clearFilters')} ({active})
         </button>
       )}
@@ -151,11 +163,11 @@ export default function Catalog() {
           <div className="flex flex-col sm:flex-row gap-3 mb-6">
             <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted" />
-              <input value={f.q} onChange={e => setF({ ...f, q: e.target.value })} placeholder={t('searchPlaceholder')}
+              <input value={f.q} onChange={e => updateFilters({ ...f, q: e.target.value })} placeholder={t('searchPlaceholder')}
                 className="w-full pl-9 pr-9 py-2.5 rounded-xl border border-line bg-surface text-fg placeholder:text-muted-2 focus:outline-none focus:border-accent text-sm" />
-              {f.q && <button onClick={() => setF({ ...f, q: '' })} className="absolute right-3 top-1/2 -translate-y-1/2 text-muted hover:text-fg"><X className="w-4 h-4" /></button>}
+              {f.q && <button onClick={() => updateFilters({ ...f, q: '' })} className="absolute right-3 top-1/2 -translate-y-1/2 text-muted hover:text-fg"><X className="w-4 h-4" /></button>}
             </div>
-            <select value={sort} onChange={e => setSort(e.target.value as Sort)}
+            <select value={sort} onChange={e => { scrollRef.current = window.scrollY; setSort(e.target.value as Sort) }}
               className="px-3 py-2.5 rounded-xl border border-line bg-surface text-fg text-sm focus:outline-none focus:border-accent">
               <option value="newest">{t('sortNewest')}</option>
               <option value="oldest">{t('sortOldest')}</option>
@@ -167,15 +179,13 @@ export default function Catalog() {
           {list.length === 0 ? (
             <div className="rounded-2xl border border-dashed border-line-2 p-12 text-center text-muted">{t('noResults')}</div>
           ) : (
-            <motion.div layout className="grid md:grid-cols-2 gap-4">
-              <AnimatePresence>
-                {list.map(th => (
-                  <motion.div key={th.id} layout initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, scale: 0.98 }} transition={{ duration: 0.25 }}>
-                    <ThesisCard thesis={th} onOpen={() => openThesis(th)} />
-                  </motion.div>
-                ))}
-              </AnimatePresence>
-            </motion.div>
+            <div className="grid md:grid-cols-2 gap-4">
+              {list.map(th => (
+                <motion.div key={th.id} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2 }}>
+                  <ThesisCard thesis={th} onOpen={() => openThesis(th)} />
+                </motion.div>
+              ))}
+            </div>
           )}
         </div>
       </div>
