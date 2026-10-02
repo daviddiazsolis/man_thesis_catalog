@@ -1,0 +1,117 @@
+{
+  "id": "2025-yanez",
+  "status": "public",
+  "authorization": "INMEDIATO",
+  "student": "Christian René Andrés Yáñez Cornejo",
+  "cohort": 2023,
+  "program": "MAN WK",
+  "defenseDate": "2025-05-08",
+  "defenseYear": 2025,
+  "advisor": "diaz",
+  "coAdvisor": null,
+  "committee": [
+    "weber",
+    "miranda"
+  ],
+  "title": {
+    "es": "Modelos predictivos de mortalidad: comparación de técnicas tradicionales y algoritmos de machine learning",
+    "en": "Predictive mortality models: a comparison of traditional techniques and machine learning algorithms"
+  },
+  "abstract": {
+    "es": "La tesis compara la capacidad de las tablas de mortalidad tradicionales frente a algoritmos de aprendizaje supervisado y modelos de series temporales para proyectar la mortalidad en la cartera de rentas vitalicias de una compañía multinacional de seguros que opera en Chile, con más de 270.000 asegurados segmentados en causantes, beneficiarios e inválidos. Los datos internos a diciembre de 2023 incluyen edad, sexo, nivel de prima, estado conyugal, número de hijos, invalidez y región, y se preprocesaron con PyCaret (one-hot, normalización min-max, SMOTE y validación cruzada estratificada de 10 folds). Se entrenaron XGBoost, LightGBM, Gradient Boosting, una red densa, LSTM y GRU como clasificadores, y SARIMA, LSTM y GRU sobre la serie mensual de fallecimientos 1990 a 2023, con SHAP para interpretar los clasificadores. XGBoost resultó el mejor clasificador (AUC 0,92, recall 0,78 en la clase fallecido) y LSTM el mejor modelo de serie temporal, con un MSE muy inferior al de SARIMA (3.314,68). Evaluados fuera de muestra con datos reales de enero a junio de 2024 mediante la métrica A/E, XGBoost fue el más estable (A/E promedio 103 %) y superó a la tabla de mortalidad en totales, causantes y beneficiarios, mientras que ningún modelo logró predecir bien el segmento de inválidos. Se concluye que los modelos complementan, pero no reemplazan, las tablas actuariales para tarificación y reservas.",
+    "en": "This thesis compares the ability of traditional mortality tables against supervised learning algorithms and time series models to project mortality in the annuity portfolio of a multinational insurance company operating in Chile, with more than 270,000 policyholders segmented into annuitants, beneficiaries and disabled members. Internal data as of December 2023 include age, sex, premium level, marital status, number of children, disability and region, and were preprocessed with PyCaret (one-hot encoding, min-max normalization, SMOTE and 10-fold stratified cross-validation). XGBoost, LightGBM, Gradient Boosting, a dense network, LSTM and GRU were trained as classifiers, and SARIMA, LSTM and GRU on the monthly series of deaths from 1990 to 2023, with SHAP used to interpret the classifiers. XGBoost was the best classifier (AUC 0.92, recall 0.78 on the deceased class) and LSTM the best time series model, with an MSE far below that of SARIMA (3,314.68). Evaluated out of sample on actual data from January to June 2024 using the A/E metric, XGBoost was the most stable (average A/E of 103%) and outperformed the mortality table for totals, annuitants and beneficiaries, while no model predicted the disabled segment well. The thesis concludes that these models complement, but do not replace, actuarial tables for pricing and reserving."
+  },
+  "highlights": {
+    "es": [
+      "Analiza la cartera de rentas vitalicias de una aseguradora multinacional en Chile con 270.438 asegurados, de los cuales 17,8 % han fallecido.",
+      "XGBoost fue el mejor clasificador de mortalidad individual, con AUC 0,92, recall 0,78 y accuracy 0,83 en el conjunto de prueba.",
+      "En series temporales mensuales 1990 a 2023, LSTM y GRU superaron a SARIMA (2,1,2)(1,1,1,12), cuyo MSE fue 3.314,68 frente a 824,35.",
+      "Validado con datos reales de enero a junio de 2024, XGBoost obtuvo un A/E promedio de 103 %, más estable que la tabla de mortalidad.",
+      "SHAP confirma que edad, sexo masculino, invalidez, ausencia de cónyuge y prima baja elevan el riesgo de fallecimiento en todos los modelos."
+    ],
+    "en": [
+      "Analyzes the annuity portfolio of a multinational insurer in Chile with 270,438 policyholders, of whom 17.8% have died.",
+      "XGBoost was the best individual mortality classifier, with AUC 0.92, recall 0.78 and accuracy 0.83 on the test set.",
+      "On monthly time series from 1990 to 2023, LSTM and GRU outperformed SARIMA (2,1,2)(1,1,1,12), whose MSE was 3,314.68 versus 824.35.",
+      "Validated on actual data from January to June 2024, XGBoost achieved an average A/E of 103%, more stable than the mortality table.",
+      "SHAP confirms that age, male sex, disability, absence of a spouse and low premium raise the risk of death across all models."
+    ]
+  },
+  "keywords": {
+    "es": [
+      "mortalidad",
+      "rentas vitalicias",
+      "tablas de mortalidad",
+      "XGBoost",
+      "LSTM",
+      "series temporales",
+      "seguros"
+    ],
+    "en": [
+      "mortality",
+      "life annuities",
+      "mortality tables",
+      "XGBoost",
+      "LSTM",
+      "time series",
+      "insurance"
+    ]
+  },
+  "domain": [
+    "finanzas",
+    "servicios"
+  ],
+  "taskTypes": [
+    "clasificación",
+    "series de tiempo / forecasting",
+    "análisis descriptivo e inferencial"
+  ],
+  "techniques": [
+    "XGBoost",
+    "LightGBM",
+    "Gradient Boosting",
+    "Multilayer Perceptron",
+    "LSTM",
+    "GRU",
+    "SARIMA",
+    "SHAP",
+    "SMOTE",
+    "Mortality tables (A/E ratio)"
+  ],
+  "tools": [
+    "Python",
+    "PyCaret",
+    "Keras",
+    "TensorFlow",
+    "pandas",
+    "matplotlib",
+    "scikit-learn",
+    "Jupyter Notebook"
+  ],
+  "datasets": [
+    {
+      "nameEs": "Cartera de rentas vitalicias de la aseguradora",
+      "nameEn": "Insurer annuity portfolio",
+      "source": "datos internos de una compañía multinacional de seguros que opera en Chile",
+      "public": false,
+      "url": null,
+      "sizeNote": "270.438 asegurados a diciembre de 2023; 48.087 fallecidos; validación con datos reales de enero a junio de 2024"
+    },
+    {
+      "nameEs": "Serie mensual de fallecimientos de la cartera",
+      "nameEn": "Monthly deaths series of the portfolio",
+      "source": "datos internos de la misma compañía de seguros (archivo muerte_series_temporales.csv)",
+      "public": false,
+      "url": null,
+      "sizeNote": "408 meses, enero 1990 a diciembre 2023"
+    }
+  ],
+  "organization": "Compañía multinacional de seguros que opera en Chile (no identificada por nombre)",
+  "socialImpact": {
+    "level": "indirect",
+    "es": "La aplicación es comercial (tarificación y reservas de rentas vitalicias), pero una mejor estimación de la mortalidad protege la suficiencia de reservas y permite precios más justos para los pensionados.",
+    "en": "The application is commercial (annuity pricing and reserving), but better mortality estimation protects reserve adequacy and allows fairer prices for pensioners."
+  },
+  "repositoryUrl": "https://repositorio.uchile.cl/handle/2250/207957",
+  "notes": "Informe final fechado en enero de 2025. El texto extraído perdió las ecuaciones y los contenidos de varias figuras y tablas; algunas tablas de resultados (A/E mensuales 2024) solo aparecen como títulos. Se detecta una inconsistencia menor: el MSE 824,35 se reporta para GRU y luego se atribuye a LSTM y GRU en conjunto. El autor no entrega el MSE numérico del LSTM de serie temporal."
+}

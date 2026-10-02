@@ -1,0 +1,99 @@
+{
+  "id": "2026-celedon",
+  "status": "public",
+  "authorization": "INMEDIATO",
+  "student": "Bastián Antonio Celedón Aguirre",
+  "cohort": 2023,
+  "program": "MAN WK",
+  "defenseDate": "2026-08-24",
+  "defenseYear": 2026,
+  "advisor": "diaz",
+  "coAdvisor": null,
+  "committee": [],
+  "title": {
+    "es": "Predictive Analytics: forecast multi escenario del pipeline comercial con Machine Learning y XAI",
+    "en": "Predictive Analytics: multi-scenario forecasting of the commercial pipeline with Machine Learning and XAI"
+  },
+  "abstract": {
+    "es": "La tesis desarrolla y evalúa un forecasting semanal multiescenario para el pipeline comercial de un corporativo de tecnologías de información B2B, cuyo forecast vigente depende de la señal cualitativa Committed del CRM. Con datos anonimizados de cierres ganados entre enero de 2023 y junio de 2026 (183 semanas, agregadas a frecuencia semanal en millones de dólares), se compara el Committed con referencias ingenuas, la progresión AR, MA, ARMA, ARIMA, ARIMAX, SARIMA y SARIMAX, los modelos avanzados Prophet, Temporal Fusion Transformer y Chronos-2, y seis algoritmos tabulares explicados con SHAP. La evaluación usa ocho ventanas de origen móvil (105 semanas fuera de muestra), covariables reconstruidas ex ante, métricas de error, sesgo, techo y dispersión, y contrastes Diebold-Mariano con Newey-West y Holm. SARIMAX ex ante con variables de fase resulta champion: WAPE agrupado de 55,38 %, techo de 67,74 % y desviación de 8,55, frente a 74,30 %, 102,24 % y 22,70 del Committed, reduciendo 412,55 MM USD de error absoluto en el panel histórico y 156,70 MM USD en Q2/2026. CatBoost logra la mejor mediana (53,46 %) pero con techo de 100,17 %, por lo que queda como challenger explicable. Se recomienda una arquitectura champion-challenger con revisión humana, monitoreo de MegaDeals y evolución futura hacia un Forecast Decision Agent prescriptivo.",
+    "en": "This thesis develops and evaluates a weekly, multi-scenario forecasting capability for the commercial pipeline of an information technology corporation focused on B2B technology integration, whose current forecast relies on the qualitative Committed signal recorded in the CRM. Using anonymized won-deal data from January 2023 to June 2026 (183 weeks, aggregated weekly in millions of US dollars), the Committed signal is compared against naive baselines, the AR, MA, ARMA, ARIMA, ARIMAX, SARIMA and SARIMAX progression, the advanced models Prophet, Temporal Fusion Transformer and Chronos-2, and six tabular algorithms explained with SHAP. Evaluation uses eight rolling-origin windows (105 out-of-sample weeks), ex ante reconstructed covariates, error, bias, ceiling and dispersion metrics, and Diebold-Mariano tests with Newey-West and Holm corrections. SARIMAX ex ante with phase variables emerges as champion: pooled WAPE of 55.38%, ceiling of 67.74% and dispersion of 8.55, versus 74.30%, 102.24% and 22.70 for Committed, cutting absolute error by USD 412.55 million over the historical panel and USD 156.70 million in Q2/2026. CatBoost attains the best median (53.46%) but with a 100.17% ceiling, so it remains an explainable challenger. The thesis recommends a champion-challenger architecture with human review, MegaDeal monitoring and future evolution toward a prescriptive Forecast Decision Agent."
+  },
+  "highlights": {
+    "es": [
+      "SARIMAX ex ante con fase es el champion: WAPE agrupado de 55,38 %, techo de 67,74 % y desviación de 8,55, muy por debajo del Committed.",
+      "La evaluación usa ocho ventanas de origen móvil entre Q2/2024 y Q1/2026, con 105 semanas fuera de muestra y covariables del CRM reconstruidas ex ante.",
+      "En el panel histórico SARIMAX reduce 412,55 MM USD de error absoluto frente al Committed (25,46 %) y 156,70 MM USD en Q2/2026 (52,59 %).",
+      "CatBoost obtiene la mejor mediana de WAPE (53,46 %) pero un techo de 100,17 %, por lo que se conserva como challenger explicable con SHAP.",
+      "El 10 % de las oportunidades concentra 87,3 % de los ingresos y los rezagos de 26 y 13 semanas dominan la importancia SHAP."
+    ],
+    "en": [
+      "SARIMAX ex ante with phase is the champion: pooled WAPE of 55.38%, ceiling of 67.74% and dispersion of 8.55, well below Committed.",
+      "Evaluation uses eight rolling-origin windows from Q2/2024 to Q1/2026, with 105 out-of-sample weeks and CRM covariates reconstructed ex ante.",
+      "Over the historical panel SARIMAX cuts absolute error by USD 412.55 million versus Committed (25.46%) and by USD 156.70 million in Q2/2026 (52.59%).",
+      "CatBoost achieves the best median WAPE (53.46%) but a 100.17% ceiling, so it is kept as an explainable challenger with SHAP.",
+      "The top 10% of opportunities concentrate 87.3% of revenue, and 26-week and 13-week lags dominate CatBoost's SHAP importance."
+    ]
+  },
+  "keywords": {
+    "es": [
+      "forecasting comercial B2B",
+      "series de tiempo",
+      "SARIMAX",
+      "pipeline CRM",
+      "champion-challenger",
+      "XAI",
+      "SHAP"
+    ],
+    "en": [
+      "B2B sales forecasting",
+      "time series",
+      "SARIMAX",
+      "CRM pipeline",
+      "champion-challenger",
+      "XAI",
+      "SHAP"
+    ]
+  },
+  "domain": [
+    "ciencia y tecnología",
+    "servicios"
+  ],
+  "taskTypes": [
+    "series de tiempo / forecasting",
+    "regresión"
+  ],
+  "techniques": [
+    "SARIMAX",
+    "SARIMA",
+    "ARIMAX",
+    "Prophet",
+    "Temporal Fusion Transformer",
+    "Chronos-2",
+    "CatBoost",
+    "XGBoost",
+    "LightGBM",
+    "SHAP"
+  ],
+  "tools": [
+    "Python",
+    "Darts"
+  ],
+  "datasets": [
+    {
+      "nameEs": "Cierres ganados semanales del CRM corporativo",
+      "nameEn": "Weekly won deals from the corporate CRM",
+      "source": "datos internos anonimizados del CRM de un corporativo de tecnologías de información (B2B)",
+      "public": false,
+      "url": null,
+      "sizeNote": "183 semanas, enero 2023 a junio 2026; ingreso modelable de 3.952 MM USD tras reglas de negocio"
+    }
+  ],
+  "organization": "Corporativo de Tecnologías de Información con foco en integración tecnológica B2B (no identificado)",
+  "socialImpact": {
+    "level": "none",
+    "es": "La tesis mejora el forecast de ingresos de una empresa privada de tecnología B2B para planificación comercial y financiera, sin una externalidad social evidente.",
+    "en": "The thesis improves revenue forecasting for a private B2B technology company for commercial and financial planning, with no evident social externality."
+  },
+  "repositoryUrl": null,
+  "notes": "La tesis aplica además AR, MA, ARMA, ARIMA, Random Forest, HistGradientBoosting, Elastic Net, Naive Seasonal, Diebold-Mariano con Newey-West y Holm, Model Confidence Set con bootstrap estacionario y pruebas ADF, KPSS y Ljung-Box; se omitieron de techniques por el límite de 10. La organización no se nombra en el texto. El texto incluye dedicatoria y agradecimientos extensos con nombres personales."
+}

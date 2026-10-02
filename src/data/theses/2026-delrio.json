@@ -1,0 +1,102 @@
+{
+  "id": "2026-delrio",
+  "status": "public",
+  "authorization": "INMEDIATO",
+  "student": "Felipe Andrés del Río Nova",
+  "cohort": 2024,
+  "program": "MAN WK",
+  "defenseDate": "2026-07-23",
+  "defenseYear": 2026,
+  "advisor": "thraves",
+  "coAdvisor": null,
+  "committee": [
+    "vairetti",
+    "weber"
+  ],
+  "title": {
+    "es": "Predicción de elección presidencial a partir de resultados de elecciones municipales",
+    "en": "Predicting presidential election outcomes from municipal election results"
+  },
+  "abstract": {
+    "es": "La tesis evalúa si los resultados de elecciones municipales en Chile contienen información suficiente para anticipar la segunda vuelta presidencial, como alternativa a las encuestas de opinión, cuya precisión ha sido cuestionada. Se construyó una base longitudinal a partir de registros oficiales del SERVEL, estandarizada a 346 comunas y seis ciclos electorales (2005 a 2025), lo que configura un problema de alta dimensionalidad con solo ocho observaciones de entrenamiento. Los votos municipales por partido se vincularon a candidaturas presidenciales mediante dos modalidades: una asignación manual experta y una inferencia ecológica con el modelo RxC implementado en la librería FASTEI de R. Sobre cada matriz se aplicaron tres modelos: Partial Least Squares, Principal Component Regression y un modelo de selección de comunas con restricción de cardinalidad (Beta=0), formulado como MILP y resuelto con CBC desde Pyomo. La validación fue temporal: ciclos históricos para entrenar, 2021 para validar y 2025 como prueba. Cinco de seis configuraciones anticiparon el triunfo de la oposición en 2025, y PLS con inferencia ecológica obtuvo el menor error, de 1,24 puntos porcentuales. La asignación ecológica superó a la manual en todos los modelos. Los hallazgos son preliminares por el reducido número de observaciones, el sobreajuste detectado y el carácter retrospectivo de la evaluación.",
+    "en": "This thesis evaluates whether Chilean municipal election results contain enough information to anticipate the presidential runoff, as an alternative to opinion polls whose accuracy has been questioned. A longitudinal database was built from official SERVEL records, standardized to 346 municipalities and six electoral cycles (2005 to 2025), which yields a high-dimensional problem with only eight training observations. Municipal votes by party were linked to presidential candidacies through two allocation schemes: a manual expert assignment and ecological inference using the RxC model implemented in the FASTEI library for R. On each resulting matrix, three models were applied: Partial Least Squares, Principal Component Regression, and a municipality selection model with a cardinality constraint (Beta=0), formulated as a MILP and solved with CBC through Pyomo. Validation followed a temporal split: historical cycles for training, 2021 for validation and 2025 as the test set. Five of six configurations correctly anticipated the opposition victory in 2025, and PLS with ecological inference achieved the lowest error, 1.24 percentage points. Ecological allocation outperformed manual allocation across all models. The findings are preliminary given the small number of observations, the overfitting detected and the retrospective nature of the evaluation."
+  },
+  "highlights": {
+    "es": [
+      "Se construyó una base longitudinal de 346 comunas y seis ciclos electorales a partir de registros oficiales del SERVEL, con 12 observaciones totales.",
+      "Se compararon dos modalidades de asignación de votos: manual experta e inferencia ecológica RxC con la librería FASTEI de R.",
+      "Se aplicaron PLS, PCR y un modelo MILP de selección de tres comunas (Beta=0) con partición temporal: validación 2021 y prueba 2025.",
+      "Cinco de seis configuraciones anticiparon el triunfo de la oposición en 2025; PLS con FASTEI logró el menor error, de 1,24 puntos porcentuales.",
+      "La inferencia ecológica superó a la asignación manual en los tres modelos, con brechas de validación de 3,8, 5,1 y 2,5 puntos porcentuales."
+    ],
+    "en": [
+      "A longitudinal database of 346 municipalities and six electoral cycles was built from official SERVEL records, with 12 observations in total.",
+      "Two vote allocation schemes were compared: manual expert assignment and RxC ecological inference using the FASTEI library for R.",
+      "PLS, PCR and a MILP model selecting three municipalities (Beta=0) were applied with a temporal split: validation on 2021 and test on 2025.",
+      "Five of six configurations anticipated the opposition victory in 2025; PLS with FASTEI achieved the lowest error, 1.24 percentage points.",
+      "Ecological inference outperformed manual allocation across the three models, with validation gaps of 3.8, 5.1 and 2.5 percentage points."
+    ]
+  },
+  "keywords": {
+    "es": [
+      "predicción electoral",
+      "inferencia ecológica",
+      "alta dimensionalidad",
+      "mínimos cuadrados parciales",
+      "regresión por componentes principales",
+      "selección de variables",
+      "SERVEL"
+    ],
+    "en": [
+      "election forecasting",
+      "ecological inference",
+      "high dimensionality",
+      "partial least squares",
+      "principal component regression",
+      "variable selection",
+      "SERVEL"
+    ]
+  },
+  "domain": [
+    "política",
+    "sector público"
+  ],
+  "taskTypes": [
+    "regresión",
+    "reducción de dimensionalidad",
+    "optimización"
+  ],
+  "techniques": [
+    "Partial Least Squares",
+    "Principal Component Regression",
+    "Ecological Inference (RxC model)",
+    "Expectation-Maximization",
+    "LAD Regression with Cardinality Constraint (MILP)",
+    "Leave-One-Out Cross-Validation"
+  ],
+  "tools": [
+    "Python",
+    "Pyomo",
+    "CBC (COIN-OR)",
+    "R",
+    "FASTEI"
+  ],
+  "datasets": [
+    {
+      "nameEs": "Resultados oficiales de elecciones municipales y presidenciales de Chile por comuna",
+      "nameEn": "Official Chilean municipal and presidential election results by municipality",
+      "source": "Servicio Electoral de Chile (SERVEL)",
+      "public": true,
+      "url": null,
+      "sizeNote": "346 comunas, seis ciclos (2005, 2009, 2013, 2017, 2021 y 2025, con municipales de 2024); matriz consolidada de 12 filas por 346 comunas"
+    }
+  ],
+  "organization": null,
+  "socialImpact": {
+    "level": "direct",
+    "es": "La tesis aborda un problema de política y decisión pública: anticipar resultados presidenciales con datos electorales oficiales y abiertos, ofreciendo una alternativa reproducible a las encuestas de opinión para organizaciones políticas, instituciones públicas y analistas.",
+    "en": "The thesis addresses a public policy and political decision problem: anticipating presidential outcomes from official open electoral data, offering a reproducible alternative to opinion polls for political organizations, public institutions and analysts."
+  },
+  "repositoryUrl": null,
+  "notes": "Tesis fechada 2026 (Actividad Formativa Equivalente), profesor guía Charles Thraves. Las predicciones sobre 2025 son retrospectivas: el resultado ya era conocido y la asignación manual de ese ciclo se ajustó al resultado observado (sesgo retrospectivo declarado por el autor). El modelo Beta=0 no alcanza optimalidad certificada en CBC y no es replicable entre corridas. Los anexos del texto solo contienen nombres de figuras, sin contenido."
+}

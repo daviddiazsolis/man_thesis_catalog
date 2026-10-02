@@ -1,0 +1,110 @@
+{
+  "id": "2025-ceroni",
+  "status": "public",
+  "authorization": "INMEDIATO",
+  "student": "Nicolás Simón Ceroni Perisic",
+  "cohort": 2023,
+  "program": "MAN WK",
+  "defenseDate": "2025-05-08",
+  "defenseYear": 2025,
+  "advisor": "weber",
+  "coAdvisor": null,
+  "committee": [
+    "miranda",
+    "diaz"
+  ],
+  "title": {
+    "es": "CervecIA: una cerveza obtenida utilizando técnicas analíticas",
+    "en": "CervecIA: a beer obtained using analytical techniques"
+  },
+  "abstract": {
+    "es": "El diseño de recetas de cerveza artesanal se basa en prueba y error: una receta nueva se elabora entre 6 y 10 veces y entre el 5 % y el 10 % de la producción se pierde en lotes fallidos. Esta tesis construye un modelo que predice el puntaje (1 a 5) de una receta a partir de sus maltas, lúpulos y variables de proceso. Mediante web scraping de Brewer's Friend se recopilaron 10.360 recetas (185 estilos, 693 maltas y 273 lúpulos) en una base SQLite. Como 8.934 recetas no tenían puntaje, se estimó con un Extra Trees Regressor a partir de visitas y elaboraciones (R cuadrado de 0,923 y MAPE de 2,82 %). Luego se normalizaron unidades por litro, se agruparon maltas en 18 macrocategorías y se construyó una función en Python que, por estilo, balancea los datos, compara modelos con PyCaret, explica el mejor con SHAP y extrae reglas con un árbol de decisión. Para American Pale Ale (747 recetas) el Extra Trees obtuvo R cuadrado de 0,92 y MAPE de 4 %; en los 10 estilos con más recetas fue siempre el mejor modelo, con MAPE bajo 8 %. Los hallazgos se tradujeron en una receta de 23 litros elaborada realmente, mostrando que la analítica puede apoyar al maestro cervecero en el diseño de recetas.",
+    "en": "Craft beer recipe design relies on trial and error: a new recipe is brewed 6 to 10 times and between 5% and 10% of production is lost in failed batches, wasting raw materials, water and energy. This thesis builds a model that predicts a recipe's score (1 to 5) from its malts, hops and process variables. Through web scraping of Brewer's Friend, 10,360 recipes were collected (185 styles, 693 malts and 273 hops) into a SQLite database. Since 8,934 recipes had no score, it was estimated with an Extra Trees Regressor from views and brews (R squared of 0.923 and MAPE of 2.82%). Units were then normalized per liter, malts were grouped into 18 macro-categories, and a Python function was built that, per style, balances the data, compares models with PyCaret, explains the best one with SHAP and extracts rules with a decision tree. For American Pale Ale (747 recipes) Extra Trees achieved an R squared of 0.92 and a MAPE of 4%; across the 10 styles with the most recipes it was always the best model, with MAPE below 8%. The findings were turned into a 23-liter recipe that was actually brewed, showing that analytics can support brewmasters in recipe design."
+  },
+  "highlights": {
+    "es": [
+      "Se recopilaron 10.360 recetas de cerveza desde Brewer's Friend mediante web scraping en Python, almacenadas en una base SQLite de 8 tablas.",
+      "Un Extra Trees Regressor estimó el puntaje faltante de 8.934 recetas a partir de visitas y elaboraciones, con R cuadrado de 0,923.",
+      "Una función automatizada por estilo balancea datos, compara modelos con PyCaret, explica con SHAP y extrae reglas con un árbol de decisión.",
+      "Para American Pale Ale (747 recetas) el modelo alcanzó R cuadrado de 0,92 y MAPE de 4 %, y fue el mejor en 10 estilos.",
+      "Los hallazgos SHAP (lúpulo Magnum en bajas dosis, malta Pale base moderada) se tradujeron en una receta de 23 litros elaborada realmente."
+    ],
+    "en": [
+      "10,360 beer recipes were collected from Brewer's Friend through web scraping in Python and stored in an 8-table SQLite database.",
+      "An Extra Trees Regressor estimated the missing score of 8,934 recipes from views and brews, with an R squared of 0.923.",
+      "An automated per-style function balances the data, compares models with PyCaret, explains them with SHAP and extracts rules with a decision tree.",
+      "For American Pale Ale (747 recipes) the model reached an R squared of 0.92 and MAPE of 4%, the best across 10 styles.",
+      "SHAP findings (Magnum hops in small doses, moderate base Pale malt) were turned into a 23-liter recipe that was actually brewed."
+    ]
+  },
+  "keywords": {
+    "es": [
+      "cerveza artesanal",
+      "diseño de recetas",
+      "web scraping",
+      "AutoML",
+      "SHAP",
+      "regresión",
+      "explicabilidad"
+    ],
+    "en": [
+      "craft beer",
+      "recipe design",
+      "web scraping",
+      "AutoML",
+      "SHAP",
+      "regression",
+      "explainability"
+    ]
+  },
+  "domain": [
+    "alimentos",
+    "industria"
+  ],
+  "taskTypes": [
+    "regresión",
+    "análisis descriptivo e inferencial"
+  ],
+  "techniques": [
+    "Extra Trees Regressor",
+    "PyCaret AutoML",
+    "SHAP",
+    "Decision Tree",
+    "Random Oversampling",
+    "Support Vector Machine",
+    "Random Forest",
+    "KNN",
+    "Neural Network"
+  ],
+  "tools": [
+    "Python",
+    "PyCaret",
+    "SHAP",
+    "scikit-learn",
+    "pandas",
+    "NumPy",
+    "Matplotlib",
+    "Seaborn",
+    "Requests",
+    "Beautiful Soup",
+    "SQLite"
+  ],
+  "datasets": [
+    {
+      "nameEs": "Recetas de cerveza de Brewer's Friend",
+      "nameEn": "Brewer's Friend beer recipes",
+      "source": "Brewer's Friend (web scraping)",
+      "public": true,
+      "url": null,
+      "sizeNote": "10.360 recetas, 185 estilos, 693 maltas y 273 lúpulos; 8.934 recetas sin puntaje"
+    }
+  ],
+  "organization": null,
+  "socialImpact": {
+    "level": "indirect",
+    "es": "La tesis busca reducir las pérdidas de materias primas, agua, energía y emisiones asociadas a los lotes de prueba fallidos en cervecerías artesanales, un beneficio ambiental y de eficiencia derivado de una aplicación comercial.",
+    "en": "The thesis aims to reduce the waste of raw materials, water, energy and emissions linked to failed test batches in craft breweries, an environmental and efficiency benefit derived from a commercial application."
+  },
+  "repositoryUrl": "https://repositorio.uchile.cl/handle/2250/207929",
+  "notes": "Documento rotulado como Taller AFE, Informe 3 (AFE para optar al grado), profesor guía Richard Weber, 2025. Resumen ejecutivo en español e inglés incluido. Las tablas y gráficos aparecen como texto al final. Inconsistencia menor: el texto dice que todos los R cuadrado por estilo superan 0,82, pero la tabla muestra Witbier con 0,77. Los modelos de clasificación (KNN, Random Forest, redes neuronales, SVM) se probaron como análisis alternativo y se descartaron."
+}

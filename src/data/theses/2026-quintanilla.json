@@ -1,0 +1,118 @@
+{
+  "id": "2026-quintanilla",
+  "status": "public",
+  "authorization": "INMEDIATO",
+  "student": "Pablo Andrés Quintanilla Medina",
+  "cohort": 2023,
+  "program": "MAN WK",
+  "defenseDate": "2026-09-07",
+  "defenseYear": 2026,
+  "advisor": "olivares",
+  "coAdvisor": "vergara",
+  "committee": [],
+  "title": {
+    "es": "Catálogos estructurados de productos para compras públicas basados en NLP y modelos de lenguaje: aplicación a Compra Ágil y comparación con Convenio Marco",
+    "en": "Structured product catalogs for public procurement based on NLP and language models: application to Compra Ágil and comparison with Convenio Marco"
+  },
+  "abstract": {
+    "es": "Las compras públicas chilenas bajo la modalidad Compra Ágil se registran como texto libre, con unidades ambiguas, marcas mezcladas con especificaciones y montos difíciles de homologar, lo que impide comparar precios y justificar decisiones. Esta tesis diseña y valida un pipeline híbrido que transforma esas descripciones en un catálogo estructurado y auditable, usando Convenio Marco como referencia semántica y transaccional. El sistema integra normalización de texto, extracción de cantidad, unidad y marca, una taxonomía de 527 categorías en 7 dominios construida desde 3,78 millones de productos de Convenio Marco, embeddings multilingües evaluados con seis indicadores, recuperación TF-IDF, calibración robusta de precios con mediana y percentiles, y un recomendador de modalidad de compra con nivel de confianza. Sobre datos oficiales de ChileCompra (4,9 millones de registros), la clasificación hold-out en Convenio Marco alcanza F1 de 0,894, pero sobre 1,13 millones de registros reales de Compra Ágil la confianza media cae a 0,405, no se detectan marcas y el 75,1 % queda sin dominio. El Convenio Marco resultó más barato en 11 de 14 categorías, aunque la mejor métrica de precio conserva un MAE de 5.184 %. Se concluye que el límite es informacional, no algorítmico, y se propone una estructura mínima obligatoria de captura para Compra Ágil, operando el sistema como apoyo a la decisión con revisión humana.",
+    "en": "Chilean public purchases under the Compra Ágil (agile purchasing) modality are recorded as free text, with ambiguous units, brands mixed with specifications, and amounts that are hard to standardize, which prevents price comparison and the justification of decisions. This thesis designs and validates a hybrid pipeline that turns those descriptions into a structured, auditable catalog, using Convenio Marco (framework agreements) as semantic and transactional reference. The system integrates text normalization, extraction of quantity, unit and brand, a taxonomy of 527 categories across 7 domains built from 3.78 million Convenio Marco products, multilingual embeddings evaluated on six indicators, TF-IDF retrieval, robust price calibration with medians and percentiles, and a purchasing-mode recommender with a confidence level. On official ChileCompra data (4.9 million records), hold-out classification on Convenio Marco reaches an F1 of 0.894, but on 1.13 million real Compra Ágil records mean confidence drops to 0.405, no brands are detected, and 75.1% of records cannot be assigned a domain. Convenio Marco was cheaper in 11 of 14 categories, although the best price metric still carries a MAE of 5,184%. The thesis concludes that the limitation is informational rather than algorithmic and proposes a mandatory minimum data-capture structure for Compra Ágil, with the system operating as decision support under human review."
+  },
+  "highlights": {
+    "es": [
+      "Procesa 4,9 millones de registros oficiales de ChileCompra: 3,78 millones de Convenio Marco y 1,13 millones de Compra Ágil.",
+      "Construye una taxonomía de 527 categorías en 7 dominios desde Convenio Marco y clasifica el 93 % de Compra Ágil.",
+      "Compara cuatro embeddings multilingües con seis indicadores; distiluse gana en F1 (0,760) pero e5-small calibra mejor (0,392).",
+      "La clasificación hold-out en Convenio Marco alcanza F1 de 0,894, pero en Compra Ágil la confianza media cae a 0,405.",
+      "Convenio Marco resulta más barato en 11 de 14 categorías, aunque la mejor métrica de precio conserva un MAE de 5.184 %."
+    ],
+    "en": [
+      "Processes 4.9 million official ChileCompra records: 3.78 million from Convenio Marco and 1.13 million from Compra Ágil.",
+      "Builds a taxonomy of 527 categories across 7 domains from Convenio Marco and classifies 93% of Compra Ágil records.",
+      "Compares four multilingual embeddings on six indicators; distiluse leads in F1 (0.760) but e5-small calibrates better (0.392).",
+      "Hold-out classification on Convenio Marco reaches an F1 of 0.894, but on Compra Ágil mean confidence drops to 0.405.",
+      "Convenio Marco is cheaper in 11 of 14 categories, although the best price metric still carries a MAE of 5,184%."
+    ]
+  },
+  "keywords": {
+    "es": [
+      "compras públicas",
+      "Compra Ágil",
+      "Convenio Marco",
+      "procesamiento de lenguaje natural",
+      "embeddings",
+      "catálogo de productos",
+      "calibración de precios"
+    ],
+    "en": [
+      "public procurement",
+      "Compra Ágil",
+      "Convenio Marco",
+      "natural language processing",
+      "embeddings",
+      "product catalog",
+      "price calibration"
+    ]
+  },
+  "domain": [
+    "sector público"
+  ],
+  "taskTypes": [
+    "NLP / LLMs",
+    "clasificación",
+    "sistemas de recomendación",
+    "análisis descriptivo e inferencial"
+  ],
+  "techniques": [
+    "Sentence Transformers",
+    "distiluse-base-multilingual-cased-v1",
+    "multilingual-e5-small",
+    "mpnet",
+    "TF-IDF",
+    "Centroid Classification",
+    "Cosine Similarity",
+    "Silhouette Score",
+    "Rule-based Attribute Extraction",
+    "Robust Statistics (Median, Percentiles)"
+  ],
+  "tools": [
+    "Python",
+    "scikit-learn",
+    "sentence-transformers",
+    "Google Drive"
+  ],
+  "datasets": [
+    {
+      "nameEs": "Catálogos de Convenio Marco",
+      "nameEn": "Convenio Marco catalogs",
+      "source": "ChileCompra (Mercado Público)",
+      "public": true,
+      "url": null,
+      "sizeNote": "3.778.844 productos en 7 dominios y 527 categorías"
+    },
+    {
+      "nameEs": "Registros de Compra Ágil",
+      "nameEn": "Compra Ágil records",
+      "source": "ChileCompra (Mercado Público)",
+      "public": true,
+      "url": null,
+      "sizeNote": "1.133.225 registros, corrida del 04/05/2026"
+    },
+    {
+      "nameEs": "Conjunto de prueba de extracción de atributos",
+      "nameEn": "Attribute extraction test set",
+      "source": "construido por el autor (17 descripciones reales de la corrida y 28 sintéticas)",
+      "public": false,
+      "url": null,
+      "sizeNote": "45 descripciones anotadas manualmente"
+    }
+  ],
+  "organization": null,
+  "socialImpact": {
+    "level": "direct",
+    "es": "La tesis aborda directamente un problema de política pública: la transparencia, eficiencia y comparabilidad de precios en las compras del Estado chileno, y propone un rediseño del formulario de Compra Ágil dirigido a ChileCompra y las unidades compradoras.",
+    "en": "The thesis directly addresses a public policy problem: transparency, efficiency and price comparability in Chilean government purchasing, and proposes a redesign of the Compra Ágil form aimed at ChileCompra and purchasing units."
+  },
+  "repositoryUrl": null,
+  "notes": "El texto incluye resumen ejecutivo y abstract. Las tablas aparecen al final del archivo, separadas de sus títulos en el cuerpo. No se nombra una contraparte institucional formal: se usan fuentes públicas de ChileCompra sin convenio con una organización. El modelo 'es-specific' se menciona sin nombre completo. Los LLMs con prompts se mencionan solo como trabajo futuro, no se aplican."
+}

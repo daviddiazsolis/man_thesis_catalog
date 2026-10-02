@@ -1,0 +1,107 @@
+{
+  "weber": {
+    "name": "Richard Weber",
+    "affiliationEs": "Departamento de Ingeniería Industrial, Universidad de Chile",
+    "affiliationEn": "Department of Industrial Engineering, Universidad de Chile",
+    "url": "https://www.dii.uchile.cl/quien/richard-weber/",
+    "urlType": "institutional"
+  },
+  "miranda": {
+    "name": "Jaime Andrés Miranda Pino",
+    "affiliationEs": "Departamento de Administración, Facultad de Economía y Negocios, Universidad de Chile",
+    "affiliationEn": "Department of Management, School of Economics and Business, Universidad de Chile",
+    "url": "https://fen.uchile.cl/academicos/jaime-miranda/",
+    "urlType": "institutional"
+  },
+  "lizama": {
+    "name": "Félix Patricio Lizama Garrido",
+    "affiliationEs": "Departamento de Administración, Facultad de Economía y Negocios, Universidad de Chile",
+    "affiliationEn": "Department of Management, School of Economics and Business, Universidad de Chile",
+    "url": "https://fen.uchile.cl/academicos/felix-lizama/",
+    "urlType": "institutional"
+  },
+  "maldonado": {
+    "name": "Sebastián Alejandro Maldonado Alarcón",
+    "affiliationEs": "Departamento de Control de Gestión y Sistemas de Información, Facultad de Economía y Negocios, Universidad de Chile",
+    "affiliationEn": "Department of Management Control and Information Systems, School of Economics and Business, Universidad de Chile",
+    "url": "https://fen.uchile.cl/es/academicos-investigacion/directorio-de-academicos/detalle/sebastian-maldonado",
+    "urlType": "institutional"
+  },
+  "thraves": {
+    "name": "Charles Mark Thraves Cortés-Monroy",
+    "affiliationEs": "Departamento de Ingeniería Industrial, Universidad de Chile",
+    "affiliationEn": "Department of Industrial Engineering, Universidad de Chile",
+    "url": "https://www.dii.uchile.cl/quien/charles-thraves/",
+    "urlType": "institutional"
+  },
+  "olivares": {
+    "name": "Marcelo Osvaldo Olivares Acuña",
+    "affiliationEs": "Departamento de Ingeniería Industrial, Universidad de Chile",
+    "affiliationEn": "Department of Industrial Engineering, Universidad de Chile",
+    "url": "https://www.dii.uchile.cl/quien/marcelo-olivares/",
+    "urlType": "institutional"
+  },
+  "vergara": {
+    "name": "Cinthya Vergara Silva",
+    "affiliationEs": "Facultad de Ingeniería y Ciencias, Universidad Adolfo Ibáñez (antes Universidad de Chile)",
+    "affiliationEn": "Faculty of Engineering and Sciences, Universidad Adolfo Ibáñez (formerly Universidad de Chile)",
+    "url": "https://www.researchgate.net/profile/Cinthya-Vergara-Silva",
+    "urlType": "personal"
+  },
+  "diaz": {
+    "name": "David Alejandro Díaz Solís",
+    "affiliationEs": "Departamento de Administración, Facultad de Economía y Negocios, Universidad de Chile",
+    "affiliationEn": "Department of Management, School of Economics and Business, Universidad de Chile",
+    "url": "https://daviddiazsolis.com",
+    "urlType": "personal"
+  },
+  "simon": {
+    "name": "Felipe Ignacio Simón Compte",
+    "affiliationEs": "Facultad de Economía y Negocios, Universidad de Chile",
+    "affiliationEn": "School of Economics and Business, Universidad de Chile",
+    "url": "https://fen.uchile.cl/academicos/felipe-simon/",
+    "urlType": "institutional"
+  },
+  "epstein": {
+    "name": "Rafael Epstein Numhauser",
+    "affiliationEs": "Departamento de Ingeniería Industrial, Universidad de Chile",
+    "affiliationEn": "Department of Industrial Engineering, Universidad de Chile",
+    "url": "https://www.dii.uchile.cl/quien/rafael-epstein/",
+    "urlType": "institutional"
+  },
+  "bernales": {
+    "name": "Alejandro Adrián Bernales Silva",
+    "affiliationEs": "Departamento de Administración, Facultad de Economía y Negocios, Universidad de Chile",
+    "affiliationEn": "Department of Management, School of Economics and Business, Universidad de Chile",
+    "url": "https://fen.uchile.cl/academicos/alejandro-bernales/",
+    "urlType": "institutional"
+  },
+  "vairetti": {
+    "name": "Carla Marina Vairetti",
+    "affiliationEs": "Facultad de Ingeniería y Ciencias Aplicadas, Universidad de los Andes (Chile)",
+    "affiliationEn": "Faculty of Engineering and Applied Sciences, Universidad de los Andes (Chile)",
+    "url": "https://investigadores.uandes.cl/en/persons/carla-marina-vairetti/",
+    "urlType": "institutional"
+  },
+  "lapaz": {
+    "name": "Ariel Isaac La Paz Lillo",
+    "affiliationEs": "Departamento de Control de Gestión y Sistemas de Información, Facultad de Economía y Negocios, Universidad de Chile",
+    "affiliationEn": "Department of Management Control and Information Systems, School of Economics and Business, Universidad de Chile",
+    "url": "https://fen.uchile.cl/academicos/ariel-la-paz/",
+    "urlType": "institutional"
+  },
+  "velasquez": {
+    "name": "Juan Domingo Velásquez Silva",
+    "affiliationEs": "Departamento de Ingeniería Industrial, Universidad de Chile",
+    "affiliationEn": "Department of Industrial Engineering, Universidad de Chile",
+    "url": "https://www.dii.uchile.cl/quien/juan-valasquez/",
+    "urlType": "institutional"
+  },
+  "diazmaureira": {
+    "name": "Juan Daniel Díaz Maureira",
+    "affiliationEs": "Facultad de Economía y Negocios, Universidad de Chile",
+    "affiliationEn": "School of Economics and Business, Universidad de Chile",
+    "url": "https://fen.uchile.cl/academicos/juan-diaz/",
+    "urlType": "institutional"
+  }
+}

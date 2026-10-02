@@ -1,0 +1,115 @@
+{
+  "id": "2026-gutierrez",
+  "status": "public",
+  "authorization": "INMEDIATO",
+  "student": "Jorge Andrés Gutiérrez Soto",
+  "cohort": 2023,
+  "program": "MAN WK",
+  "defenseDate": "2026-07-23",
+  "defenseYear": 2026,
+  "advisor": "weber",
+  "coAdvisor": null,
+  "committee": [
+    "thraves",
+    "vairetti"
+  ],
+  "title": {
+    "es": "Pronóstico de demanda de consultas de urgencias respiratorias para la planificación operativa de la red asistencial en la Región de Los Lagos",
+    "en": "Forecasting respiratory emergency visit demand for operational planning of the healthcare network in the Los Lagos Region"
+  },
+  "abstract": {
+    "es": "La red asistencial pública de la Región de Los Lagos (Servicios de Salud Osorno, Reloncaví y Chiloé) enfrenta cada invierno alzas estacionales de urgencias respiratorias que tensionan su capacidad, y la planificación suele basarse en esquemas reactivos o promedios históricos. La tesis evalúa si es posible pronosticar la demanda diaria de consultas de urgencia respiratoria a 30 días con precisión suficiente para apoyar decisiones de dotación, insumos y coordinación de la red. Se utiliza la serie diaria del DEIS (Ministerio de Salud) entre 2015 y 2025, con 4.018 observaciones y una media de 802 consultas diarias, modelando el quiebre del COVID-19 con dummies por tramos. El análisis exploratorio identifica estacionalidad anual e intrasemanal, autocorrelación residual y un efecto calendario móvil por las vacaciones de invierno. Se comparan un baseline estacional, una regresión lineal estructurada (OLS), CatBoost y dos variantes de LSTM bajo walk-forward mensual recursivo sobre 2024 y 2025. CatBoost obtiene el mejor desempeño en las cuatro métricas (R² fuera de muestra de 0,79, MAPE de 11,91 %, MAE de 100 consultas), frente a 19,58 % de MAPE del baseline y 16,25 % del OLS, con un error cercano al 7 % en la primera semana. El trabajo propone un protocolo de alertas tempranas en cuatro niveles y cuantifica de forma ilustrativa el valor de la reducción del error, del orden de 26.400 consultas anuales mejor anticipadas.",
+    "en": "The public healthcare network of the Los Lagos Region (Osorno, Reloncaví and Chiloé Health Services) faces seasonal surges in respiratory emergency visits every winter that strain its operational capacity, and planning is usually done with reactive schemes or historical averages. The thesis evaluates whether daily respiratory emergency visit demand can be forecast with a 30-day horizon and sufficient accuracy to support staffing, supply and network coordination decisions. It uses the daily series from DEIS (Ministry of Health) between 2015 and 2025, with 4,018 observations and a mean of 802 daily visits, including the COVID-19 structural break modeled through segment dummies and ramps. The exploratory analysis identifies annual and intra-weekly seasonality, residual temporal dependence and a moving calendar effect associated with winter school holidays. A seasonal baseline, a structured linear regression (OLS), Gradient Boosting (CatBoost) and two LSTM variants are compared under a recursive monthly walk-forward scheme over 2024 and 2025. CatBoost achieves the best performance on all four metrics (out-of-sample R² of 0.79, MAPE of 11.91%, MAE of 100 visits), against a baseline MAPE of 19.58% and 16.25% for OLS, with an error close to 7% in the first week of the horizon. The work proposes a four-level early warning protocol and illustratively quantifies the value of the error reduction, on the order of 26,400 visits per year better anticipated."
+  },
+  "highlights": {
+    "es": [
+      "CatBoost alcanza un R² fuera de muestra de 0,79 y un MAPE de 11,91 % en 24 meses de walk-forward mensual (2024 y 2025).",
+      "La serie DEIS cubre 4.018 días entre 2015 y 2025, con media de 802 consultas diarias y peaks invernales superiores a 2.500 consultas.",
+      "El baseline por semana epidemiológica obtiene MAPE de 19,58 % y el OLS 16,25 %; CatBoost reduce el MAE en 42 % frente al baseline.",
+      "La LSTM, con las mismas 163 variables que CatBoost, obtiene un R² de 0,62 y queda por debajo incluso del modelo lineal.",
+      "El MAPE de CatBoost sube de 7,19 % en t+1 a 20 % en t+30; se propone un protocolo de alertas tempranas en cuatro niveles."
+    ],
+    "en": [
+      "CatBoost reaches an out-of-sample R² of 0.79 and a MAPE of 11.91% over 24 months of monthly walk-forward validation (2024 and 2025).",
+      "The DEIS series covers 4,018 days between 2015 and 2025, with a mean of 802 daily visits and winter peaks above 2,500 visits.",
+      "The epidemiological-week baseline yields a MAPE of 19.58% and OLS 16.25%, so CatBoost cuts MAE by 42% relative to the baseline.",
+      "The LSTM, fed the same 163 variables as CatBoost, obtains an R² of 0.62 and falls below even the linear model.",
+      "CatBoost's MAPE rises from 7.19% at t+1 to 20% at t+30, and a four-level early warning protocol is proposed."
+    ]
+  },
+  "keywords": {
+    "es": [
+      "pronóstico de demanda",
+      "urgencias respiratorias",
+      "series de tiempo",
+      "gradient boosting",
+      "walk-forward",
+      "salud pública",
+      "Región de Los Lagos"
+    ],
+    "en": [
+      "demand forecasting",
+      "respiratory emergencies",
+      "time series",
+      "gradient boosting",
+      "walk-forward",
+      "public health",
+      "Los Lagos Region"
+    ]
+  },
+  "domain": [
+    "salud",
+    "sector público"
+  ],
+  "taskTypes": [
+    "series de tiempo / forecasting",
+    "regresión",
+    "clustering / segmentación"
+  ],
+  "techniques": [
+    "OLS Regression",
+    "CatBoost",
+    "LSTM",
+    "Fourier Terms",
+    "Walk-Forward Validation",
+    "ACF/PACF",
+    "Ljung-Box Test",
+    "K-Means"
+  ],
+  "tools": [
+    "Python",
+    "pandas",
+    "NumPy",
+    "statsmodels",
+    "CatBoost",
+    "PyTorch",
+    "plotly",
+    "joblib"
+  ],
+  "datasets": [
+    {
+      "nameEs": "Consultas de urgencia por causas respiratorias, Región de Los Lagos",
+      "nameEn": "Respiratory emergency visits, Los Lagos Region",
+      "source": "DEIS, Ministerio de Salud de Chile (glosa Total Causas Sistema Respiratorio)",
+      "public": true,
+      "url": null,
+      "sizeNote": "4.018 observaciones diarias, enero 2015 a diciembre 2025; entrenamiento 2015-2023 y evaluación 2024-2025"
+    },
+    {
+      "nameEs": "Calendario oficial de vacaciones de invierno, Región de Los Lagos",
+      "nameEn": "Official winter school holiday calendar, Los Lagos Region",
+      "source": "Ministerio de Educación (MINEDUC)",
+      "public": true,
+      "url": null,
+      "sizeNote": "fechas anuales 2015-2025, excluyendo 2020 y 2021"
+    }
+  ],
+  "organization": null,
+  "socialImpact": {
+    "level": "direct",
+    "es": "La tesis aborda directamente la planificación de capacidad del sistema público de salud en la Región de Los Lagos, buscando anticipar peaks de urgencias respiratorias para reducir saturación y tiempos de espera de la población usuaria.",
+    "en": "The thesis directly addresses capacity planning in the public health system of the Los Lagos Region, aiming to anticipate respiratory emergency peaks to reduce saturation and waiting times for the user population."
+  },
+  "repositoryUrl": null,
+  "notes": "Trabajo orientado a los Servicios de Salud Reloncaví, Chiloé y Osorno como contraparte institucional, pero los datos usados son públicos (DEIS) y no se declara convenio formal, por lo que organization se deja en null. La valorización económica (396 a 793 millones de pesos anuales) es un ejercicio ilustrativo, no un resultado del modelo. Fecha de la portada: junio 2026; profesor guía Richard Weber."
+}

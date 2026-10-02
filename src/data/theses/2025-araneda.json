@@ -1,0 +1,107 @@
+{
+  "id": "2025-araneda",
+  "status": "public",
+  "authorization": "INMEDIATO",
+  "student": "Ignacio Andrés Araneda Gallardo",
+  "cohort": 2023,
+  "program": "MAN WK",
+  "defenseDate": "2025-09-09",
+  "defenseYear": 2025,
+  "advisor": "weber",
+  "coAdvisor": null,
+  "committee": [],
+  "title": {
+    "es": "Desarrollo de una Metodología Analítica para Identificar Factores Determinantes del Review Score en E-commerce: Aplicación a la Base de Datos de Olist, Brasil",
+    "en": "Development of an Analytical Methodology to Identify the Determinants of Review Score in E-commerce: Application to the Olist Database, Brazil"
+  },
+  "abstract": {
+    "es": "En el comercio electrónico las reseñas de los clientes condicionan la reputación de los vendedores y las decisiones de compra, pero las plataformas suelen carecer de metodologías que integren esa información con variables logísticas y de producto. Esta tesis desarrolla una metodología analítica para identificar los factores determinantes del review score, aplicada a la base pública de Olist (Brasil) en Kaggle, que tras integrar siete tablas reunió 119.143 registros y 39 atributos. El trabajo combina análisis exploratorio, ingeniería de variables (diferencia entre fecha estimada y real de entrega, estado de entrega, volumen del producto), selección con SelectKBest, balanceo con SMOTE y clasificación binaria de reseñas negativas (1 y 2) frente a positivas (3 a 5) con Random Forest, Gradient Boosting, AdaBoost, XGBoost, LSTM y RNN. El sentimiento de los comentarios en portugués se cuantificó con PySentimiento y RoBERTa, y los temas de insatisfacción se descubrieron con BERTopic. Random Forest fue el mejor modelo, con precisión y F1 de 87,5 % sin sentimiento y 91,1 % al incorporar el puntaje de PySentimiento. SHAP confirmó que el tiempo de entrega y el sentimiento del comentario son los factores más influyentes, y BERTopic mostró que las quejas se concentran en pedidos no entregados, retrasos y productos distintos a su descripción. La metodología es replicable para anticipar insatisfacción y priorizar mejoras logísticas.",
+    "en": "In e-commerce, customer ratings and reviews shape seller reputation and purchase decisions, yet platforms often lack methodologies that integrate this information with logistics and product variables. This thesis develops an analytical methodology to identify the determinants of review score, applied to the public Olist (Brazil) database available on Kaggle, which after merging seven tables yielded 119,143 records and 39 attributes. The work combines exploratory analysis, feature engineering (difference between estimated and actual delivery date, delivery status, product volume and customer-level aggregates), feature selection with SelectKBest, class balancing with SMOTE, and binary classification of negative reviews (1 and 2) versus positive ones (3 to 5) using Random Forest, Gradient Boosting, AdaBoost, XGBoost, LSTM and RNN. The sentiment of Portuguese comments was quantified with the pretrained PySentimiento and RoBERTa models, and dissatisfaction themes were discovered with BERTopic. Random Forest was the best model, with accuracy and F1 of 87.5% without sentiment and 91.1% when the PySentimiento score was included. SHAP confirmed that delivery time and comment sentiment are the most influential factors, and BERTopic showed that complaints concentrate on undelivered orders, delays and products that differ from their description. The methodology is replicable for anticipating dissatisfaction and prioritizing logistics and catalog improvements."
+  },
+  "highlights": {
+    "es": [
+      "La base integrada de Olist reunió 119.143 registros y 39 atributos de clientes, pedidos, productos, pagos, reseñas y vendedores.",
+      "Random Forest alcanzó 87,5 % de precisión y F1 sin sentimiento, y 91,1 % al incorporar el puntaje de sentimiento de PySentimiento.",
+      "AdaBoost mostró el mayor salto relativo, pasando de 68,8 % a 83,6 % de precisión al agregar la variable de sentimiento.",
+      "Según SHAP, la diferencia entre fecha estimada y real de entrega y el sentimiento del comentario son los factores más influyentes en reseñas negativas.",
+      "BERTopic con Sentence-BERT y HDBSCAN identificó 8 clústeres (coherencia 0,5878); el peor promedió 1,43 estrellas con 85,7 % de reseñas negativas."
+    ],
+    "en": [
+      "The integrated Olist database comprised 119,143 records and 39 attributes covering customers, orders, products, payments, reviews and sellers.",
+      "Random Forest reached 87.5% accuracy and F1 without sentiment, and 91.1% when the PySentimiento sentiment score was included.",
+      "AdaBoost showed the largest relative gain, rising from 68.8% to 83.6% accuracy once the sentiment variable was added.",
+      "According to SHAP, the gap between estimated and actual delivery date and comment sentiment are the most influential factors behind negative reviews.",
+      "BERTopic with Sentence-BERT and HDBSCAN identified 8 clusters (coherence 0.5878); the worst averaged 1.43 stars with 85.7% negative reviews."
+    ]
+  },
+  "keywords": {
+    "es": [
+      "comercio electrónico",
+      "reseñas de clientes",
+      "análisis de sentimientos",
+      "clasificación binaria",
+      "SHAP",
+      "BERTopic",
+      "logística de entrega"
+    ],
+    "en": [
+      "e-commerce",
+      "customer reviews",
+      "sentiment analysis",
+      "binary classification",
+      "SHAP",
+      "BERTopic",
+      "delivery logistics"
+    ]
+  },
+  "domain": [
+    "e-commerce",
+    "retail"
+  ],
+  "taskTypes": [
+    "clasificación",
+    "NLP / LLMs",
+    "clustering / segmentación",
+    "análisis descriptivo e inferencial"
+  ],
+  "techniques": [
+    "Random Forest",
+    "Gradient Boosting",
+    "AdaBoost",
+    "XGBoost",
+    "LSTM",
+    "SHAP",
+    "BERTopic",
+    "Sentence-BERT",
+    "BERTweet (PySentimiento)",
+    "XLM-RoBERTa"
+  ],
+  "tools": [
+    "Python",
+    "scikit-learn",
+    "Hugging Face Transformers",
+    "pysentimiento",
+    "BERTopic",
+    "TextBlob",
+    "VADER",
+    "Kaggle"
+  ],
+  "datasets": [
+    {
+      "nameEs": "Base de datos de e-commerce de Olist, Brasil",
+      "nameEn": "Olist Brazilian e-commerce database",
+      "source": "Olist (Kaggle)",
+      "public": true,
+      "url": null,
+      "sizeNote": "119.143 registros y 39 atributos tras integrar 7 tablas; unos 69.000 registros sin comentario de reseña"
+    }
+  ],
+  "organization": null,
+  "socialImpact": {
+    "level": "indirect",
+    "es": "Aplicación comercial sobre datos públicos, con beneficio derivado para los consumidores: la metodología permite anticipar insatisfacción, mejorar el cumplimiento de entregas y la veracidad de las descripciones de producto.",
+    "en": "Commercial application on public data with a derived benefit for consumers: the methodology helps anticipate dissatisfaction and improve delivery compliance and the accuracy of product descriptions."
+  },
+  "repositoryUrl": "https://repositorio.uchile.cl/handle/2250/207923",
+  "notes": "El texto extraído no incluye las tablas en su lugar original: aparecen al final en formato de columnas separadas por barras verticales. El lenguaje Python no se menciona de forma explícita; se infiere por las librerías citadas (scikit-learn, transformers de Hugging Face, pysentimiento). Se evaluaron además BETO (nlptown), TextBlob y VADER como modelos de sentimiento, descartados por menor desempeño. Fecha de la portada: junio 2025."
+}

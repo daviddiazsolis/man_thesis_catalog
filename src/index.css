@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+/* Paleta FEN (fen.uchile.cl): azul #0034d9, azul profundo #0d0b70, celeste #3b78db, dorado #e2b647 */
+:root {
+  --fen-blue: #0034d9;
+  --fen-navy: #0d0b70;
+  --fen-sky: #3b78db;
+  --fen-gold: #e2b647;
+
+  --bg: #f6f7fb;
+  --bg-2: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #eef1f8;
+  --border: #d9deea;
+  --border-2: #c3cadb;
+  --fg: #0f172a;
+  --fg-2: #334155;
+  --muted: #64748b;
+  --muted-2: #94a3b8;
+  --accent: #0034d9;
+  --accent-soft: rgba(0, 52, 217, 0.08);
+  --accent-fg: #ffffff;
+}
+html.dark {
+  --bg: #090b1a;
+  --bg-2: #0d1026;
+  --surface: #11152e;
+  --surface-2: #181d3d;
+  --border: #242a52;
+  --border-2: #323a6b;
+  --fg: #f1f3fa;
+  --fg-2: #cdd3ea;
+  --muted: #8b93b8;
+  --muted-2: #5e668f;
+  --accent: #5b86ff;
+  --accent-soft: rgba(91, 134, 255, 0.14);
+  --accent-fg: #ffffff;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-2: var(--bg-2);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--border);
+  --color-line-2: var(--border-2);
+  --color-fg: var(--fg);
+  --color-fg-2: var(--fg-2);
+  --color-muted: var(--muted);
+  --color-muted-2: var(--muted-2);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-fg: var(--accent-fg);
+  --color-fen-blue: var(--fen-blue);
+  --color-fen-navy: var(--fen-navy);
+  --color-fen-sky: var(--fen-sky);
+  --color-fen-gold: var(--fen-gold);
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); }
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 4px; }
+
+.fen-gradient { background-image: linear-gradient(135deg, var(--fen-navy) 0%, var(--fen-blue) 70%, var(--fen-sky) 100%); }
+.fen-text-gradient { background-image: linear-gradient(90deg, var(--fen-blue), var(--fen-sky)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+html.dark .fen-text-gradient { background-image: linear-gradient(90deg, #7ea2ff, #b9cbff); }
+
+@keyframes pulse-glow { 0%, 100% { opacity: 0.35; } 50% { opacity: 0.7; } }
+.pulse-glow { animation: pulse-glow 4s ease-in-out infinite; }

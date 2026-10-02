@@ -1,0 +1,103 @@
+{
+  "id": "2025-gajardo",
+  "status": "public",
+  "authorization": "INMEDIATO",
+  "student": "Juan Francisco Gajardo Mejías",
+  "cohort": 2024,
+  "program": "MAN WK",
+  "defenseDate": "2025-08-04",
+  "defenseYear": 2025,
+  "advisor": "maldonado",
+  "coAdvisor": null,
+  "committee": [
+    "diaz",
+    "bernales"
+  ],
+  "title": {
+    "es": "Modelamiento predictivo de aportes y rescates de fondos mutuos de renta fija local",
+    "en": "Predictive modeling of contributions and redemptions in local fixed-income mutual funds"
+  },
+  "abstract": {
+    "es": "Los gestores de fondos mutuos de renta fija en Chile no cuentan con modelos que anticipen aportes y rescates, pese a que estos flujos afectan la liquidez, los precios de la deuda y el momento óptimo para emitir bonos. La tesis construye un modelo predictivo del porcentaje de aporte/rescate sobre patrimonio para las nueve categorías de fondos de renta fija local definidas por la AAFM, usando como variables explicativas las rentabilidades pasadas nominales y reales a distintos plazos. Los datos se obtuvieron por web scraping del sitio de la AAFM y cubren unos 15 años de operación diaria, con entre 3.200 y 3.700 observaciones por categoría. Tras limpieza, test ADF y descomposición aditiva, se compararon ARIMA y SARIMAX con rentabilidades como exógenas, y luego Decision Tree, Random Forest, XGBoost, SVM, GRU y LSTM. SARIMAX superó a ARIMA en la mayoría de las categorías (en fondos menores a 365 días en pesos el RMSE a 1 día bajó de 0,059 a 0,0014) y XGBoost resultó el modelo más robusto para predicción multihorizonte, con RMSE entre 0,23 y 0,50 puntos porcentuales en fondos de duración media y larga. Los fondos menores a 90 días siguen siendo impredecibles (RMSE cercano a 10,8). El trabajo entrega una guía de selección de modelos por perfil de fondo útil para portfolio managers, emisores de deuda y bancos de inversión.",
+    "en": "Fixed-income mutual fund managers in Chile lack models that anticipate when clients will contribute or redeem, even though these flows affect liquidity, the price of debt instruments and the optimal timing for issuing bonds or buying portfolios. The thesis builds a predictive model of the contribution/redemption percentage over fund assets for the nine local fixed-income fund categories defined by the AAFM, using past nominal and real returns at several horizons as explanatory variables. Data were obtained by web scraping the AAFM website and cover about 15 years of daily operations, with between 3,200 and 3,700 observations per category. After cleaning, ADF tests and additive decomposition, ARIMA and SARIMAX with returns as exogenous variables were compared, followed by Decision Tree, Random Forest, XGBoost, SVM, GRU and LSTM. SARIMAX outperformed ARIMA in most categories (for funds under 365 days in pesos the 1-day RMSE fell from 0.059 to 0.0014) and XGBoost proved the most robust model for multi-horizon prediction, with RMSE between 0.23 and 0.50 percentage points in medium- and long-duration funds. Funds under 90 days remain unpredictable (RMSE close to 10.8). The work delivers a model selection guide by fund profile useful for portfolio managers, debt issuers and investment banks."
+  },
+  "highlights": {
+    "es": [
+      "Se modelaron nueve categorías de fondos de renta fija local con unos 15 años de datos diarios obtenidos por web scraping de la AAFM.",
+      "Todas las series de porcentaje de aporte/rescate resultaron estacionarias según el test ADF, con p-valores inferiores a 0,01.",
+      "SARIMAX con rentabilidades pasadas como exógenas superó a ARIMA en la mayoría de las categorías, bajando el RMSE a 1 día de 0,059 a 0,0014.",
+      "XGBoost fue el modelo más robusto para predicción multihorizonte, con RMSE entre 0,23 y 0,50 puntos porcentuales en fondos de duración media y larga.",
+      "Los fondos de deuda menores a 90 días resultaron impredecibles para todos los modelos, con RMSE cercano a 10,8 puntos porcentuales."
+    ],
+    "en": [
+      "Nine local fixed-income fund categories were modeled with about 15 years of daily data obtained by web scraping the AAFM website.",
+      "All contribution/redemption percentage series were stationary according to the ADF test, with p-values below 0.01.",
+      "SARIMAX with past returns as exogenous variables outperformed ARIMA in most categories, cutting the 1-day RMSE from 0.059 to 0.0014.",
+      "XGBoost was the most robust model for multi-horizon prediction, with RMSE between 0.23 and 0.50 percentage points in medium- and long-duration funds.",
+      "Debt funds under 90 days proved unpredictable for every model, with RMSE close to 10.8 percentage points."
+    ]
+  },
+  "keywords": {
+    "es": [
+      "fondos mutuos",
+      "renta fija",
+      "aportes y rescates",
+      "series de tiempo",
+      "SARIMAX",
+      "XGBoost",
+      "redes recurrentes"
+    ],
+    "en": [
+      "mutual funds",
+      "fixed income",
+      "contributions and redemptions",
+      "time series",
+      "SARIMAX",
+      "XGBoost",
+      "recurrent neural networks"
+    ]
+  },
+  "domain": [
+    "finanzas",
+    "banca"
+  ],
+  "taskTypes": [
+    "series de tiempo / forecasting",
+    "regresión",
+    "análisis descriptivo e inferencial"
+  ],
+  "techniques": [
+    "ARIMA",
+    "SARIMAX",
+    "Decision Tree",
+    "Random Forest",
+    "XGBoost",
+    "SVM",
+    "LSTM",
+    "GRU",
+    "ADF test",
+    "Seasonal decomposition"
+  ],
+  "tools": [
+    "Python",
+    "Excel"
+  ],
+  "datasets": [
+    {
+      "nameEs": "Aportes, rescates y rentabilidades de fondos mutuos de renta fija local (AAFM)",
+      "nameEn": "Contributions, redemptions and returns of local fixed-income mutual funds (AAFM)",
+      "source": "Web scraping del sitio de la Asociación de Administradoras de Fondos Mutuos de Chile (AAFM)",
+      "public": true,
+      "url": "https://www.afm.cl/",
+      "sizeNote": "Unos 15 años de datos diarios; 9 categorías de fondos con entre 3.189 y 3.721 observaciones cada una tras la limpieza"
+    }
+  ],
+  "organization": null,
+  "socialImpact": {
+    "level": "indirect",
+    "es": "La aplicación es comercial (gestión de fondos, emisión de deuda e inversión), pero anticipar rescates masivos ayuda a reducir riesgos de liquidez y ventas forzadas, lo que contribuye a la estabilidad del sistema financiero chileno.",
+    "en": "The application is commercial (fund management, debt issuance and investment), but anticipating mass redemptions helps reduce liquidity risk and fire sales, which contributes to the stability of the Chilean financial system."
+  },
+  "repositoryUrl": "https://repositorio.uchile.cl/handle/2250/207933",
+  "notes": "El texto no nombra explícitamente el lenguaje; se infiere Python por las referencias a MinMaxScaler, seasonal_decompose, DataFrame, Adam y EarlyStopping. Se menciona que el modelo se orienta a un portfolio manager de un banco de inversión, pero no se identifica ninguna organización. Las tablas de machine learning (5 a 10) reportan RMSE pero el texto las llama repetidamente 'rentabilidad', lo que genera confusión; el resumen ejecutivo repite ese uso. Hay dos tablas numeradas como Tabla 2 y los gráficos ARIMA/SARIMAX y los boxplots del anexo no se extrajeron del PDF."
+}

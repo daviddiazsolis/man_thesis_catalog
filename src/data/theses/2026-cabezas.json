@@ -1,0 +1,96 @@
+{
+  "id": "2026-cabezas",
+  "status": "public",
+  "authorization": "INMEDIATO",
+  "student": "Cristian Rodrigo Cabezas Lepilla",
+  "cohort": 2023,
+  "program": "MAN WK",
+  "defenseDate": "2026-08-21",
+  "defenseYear": 2026,
+  "advisor": "thraves",
+  "coAdvisor": null,
+  "committee": [],
+  "title": {
+    "es": "Tasa de natalidad y política pública: modelos predictivos con datos de panel mundial y machine learning supervisado",
+    "en": "Birth rate and public policy: predictive models with global panel data and supervised machine learning"
+  },
+  "abstract": {
+    "es": "La tesis aborda la caída sostenida de la tasa de natalidad y su relevancia para el diseño de políticas públicas, con Chile como contexto de aplicación. Siguiendo CRISP-DM, se construye un modelo predictivo de la tasa de natalidad a partir de variables sociodemográficas y económicas internacionales. Los datos provienen de World Bank Open Data (1960-2023), en formato de panel de países y años, con indicadores de salud, educación, empleo y desarrollo económico. Tras filtrar casos completos, la base pasó de 14.047 a 923 registros, con mayor peso de países de ingreso alto (61 % de la muestra final). Se aplicaron transformaciones logarítmicas a las variables sesgadas y una partición por país (70 % entrenamiento, 30 % prueba) para evaluar la generalización a países no vistos. Se compararon regresión lineal múltiple (OLS), Ridge, Random Forest y Gradient Boosting mediante R², MAE y RMSE. Gradient Boosting obtuvo el mejor desempeño, con R² de 0,903 y MAE de 0,084 en prueba, mientras que los modelos lineales alcanzaron un R² de 0,839. El análisis SHAP identificó la esperanza de vida y la educación terciaria como los factores que más reducen la natalidad, y el empleo agrícola como el que más la eleva, en línea con la teoría de la transición demográfica. La herramienta se propone como apoyo a políticas públicas basadas en evidencia.",
+    "en": "The thesis addresses the sustained decline in birth rates and its relevance for public policy design, with Chile as the application context. Following the CRISP-DM methodology, a predictive model of the birth rate is built from international sociodemographic and economic variables. Data come from World Bank Open Data (1960-2023), structured as a country-year panel with indicators on health, education, employment, economic development and demographic characteristics. After complete-case filtering, the dataset shrank from 14,047 to 923 records, with a larger share of high-income countries (61% of the final sample). Logarithmic transformations were applied to skewed variables, and a country-based split (70% training, 30% test) was used to assess generalization to unseen countries. Multiple linear regression (OLS), Ridge, Random Forest and Gradient Boosting were compared using R², MAE and RMSE. Gradient Boosting performed best, with a test R² of 0.903 and MAE of 0.084, while the linear models reached an R² of 0.839. SHAP analysis identified life expectancy and tertiary education as the factors that most reduce the birth rate, and agricultural employment as the one that most increases it, consistent with demographic transition theory. The tool is proposed as support for evidence-based public policy decisions."
+  },
+  "highlights": {
+    "es": [
+      "Se construye un modelo predictivo de la tasa de natalidad con datos de panel del Banco Mundial para múltiples países entre 1960 y 2023.",
+      "El filtrado de casos completos redujo la base de 14.047 a 923 registros y elevó la participación de países de ingreso alto a 61 %.",
+      "La partición se hizo por país (70 % entrenamiento, 30 % prueba) para evaluar la generalización del modelo a países no observados en el entrenamiento.",
+      "Gradient Boosting fue el mejor modelo con R² de 0,903 y MAE de 0,084 en prueba, frente a 0,839 de R² en OLS y Ridge.",
+      "El análisis SHAP muestra que la esperanza de vida y la educación terciaria reducen la natalidad, mientras el empleo agrícola la incrementa."
+    ],
+    "en": [
+      "A predictive model of the birth rate is built with World Bank panel data covering multiple countries between 1960 and 2023.",
+      "Complete-case filtering reduced the dataset from 14,047 to 923 records, raising the share of high-income countries from 39% to 61%.",
+      "The split was done by country (70% training, 30% test) to assess the model's generalization to countries not seen during training.",
+      "Gradient Boosting was the best model with a test R² of 0.903 and MAE of 0.084, versus an R² of 0.839 for OLS and Ridge.",
+      "SHAP analysis shows that life expectancy and tertiary education reduce the birth rate, while agricultural employment increases it."
+    ]
+  },
+  "keywords": {
+    "es": [
+      "tasa de natalidad",
+      "política pública",
+      "datos de panel",
+      "machine learning supervisado",
+      "Gradient Boosting",
+      "SHAP",
+      "transición demográfica"
+    ],
+    "en": [
+      "birth rate",
+      "public policy",
+      "panel data",
+      "supervised machine learning",
+      "Gradient Boosting",
+      "SHAP",
+      "demographic transition"
+    ]
+  },
+  "domain": [
+    "sector público",
+    "política"
+  ],
+  "taskTypes": [
+    "regresión",
+    "análisis descriptivo e inferencial"
+  ],
+  "techniques": [
+    "Linear Regression (OLS)",
+    "Ridge Regression",
+    "Random Forest",
+    "Gradient Boosting",
+    "SHAP",
+    "Pearson Correlation",
+    "Log Transformation"
+  ],
+  "tools": [
+    "Python",
+    "Google Colab"
+  ],
+  "datasets": [
+    {
+      "nameEs": "Indicadores de desarrollo mundial del Banco Mundial (panel de países, 1960-2023)",
+      "nameEn": "World Bank development indicators (country panel, 1960-2023)",
+      "source": "World Bank Open Data",
+      "public": true,
+      "url": null,
+      "sizeNote": "14.047 registros país-año originales, 923 tras filtrar casos completos; 16 variables finales"
+    }
+  ],
+  "organization": null,
+  "socialImpact": {
+    "level": "direct",
+    "es": "La tesis aborda directamente un problema de política pública: la caída de la natalidad y sus determinantes socioeconómicos, proponiendo el modelo como herramienta para decisiones de política basadas en evidencia.",
+    "en": "The thesis directly addresses a public policy problem: the decline in birth rates and its socioeconomic determinants, proposing the model as a tool for evidence-based policy decisions."
+  },
+  "repositoryUrl": null,
+  "notes": "El texto extraído comienza en el capítulo de metodología: no incluye portada, resumen, introducción ni marco teórico. Hay inconsistencia en el período de datos (1998-2023 en la descripción del enfoque, 1960-2023 en resultados). Las tablas y gráficos no están en el texto, por lo que no se dispone de RMSE ni de métricas de Random Forest en prueba."
+}

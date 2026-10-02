@@ -1,0 +1,149 @@
+{
+  "id": "2026-hernandez",
+  "status": "public",
+  "authorization": "INMEDIATO",
+  "student": "Cristian Luis Hernández Milla",
+  "cohort": 2023,
+  "program": "MAN WK",
+  "defenseDate": "2026-07-08",
+  "defenseYear": 2026,
+  "advisor": "weber",
+  "coAdvisor": null,
+  "committee": [
+    "lapaz",
+    "velasquez"
+  ],
+  "title": {
+    "es": "Datos públicos como catalizador de la industria: el caso de los datos catastrales del Servicio de Impuestos Internos en Chile",
+    "en": "Public data as an industry catalyst: the case of the cadastral data of Chile's Internal Revenue Service"
+  },
+  "abstract": {
+    "es": "El SII de Chile administra unos 9,5 millones de predios con avalúos, superficies, destinos y geometrías, datos públicos por ley pero inutilizables para análisis masivo por tres barreras técnicas: un archivo de ancho fijo de 3 GB, una API de consulta unitaria con bloqueo de IPs y un servicio WMS que entrega los polígonos solo como imágenes PNG. La tesis implementa un pipeline de ingeniería de datos geoespaciales que supera las tres barreras: parseo del archivo heredado, extracción distribuida con 30 túneles WireGuard, descarga de tiles WMS a zoom 19, polygonización raster con GDAL, filtrado por valor DN y compactness, y spatial join con GeoPandas mediante el concepto de rol base. El resultado es un dataset nacional de 9,55 millones de predios en las 343 comunas, 5,67 millones de ellos (60,3 %) con polígono vectorial de unos 30 cm de resolución, más 16 semestres de series históricas de avalúo. Una validación en Lebu (n = 1.396) muestra un error mediano de 0,4 m entre coordenada oficial y centroide. El dataset se distribuye en la plataforma Catastral.cl (FastAPI, PostGIS, React) bajo un modelo de pago social y sirve de capa base a un sistema de localización de estaciones de servicio. Se concluye que las barreras son técnicas, no legales, y que la inaccesibilidad cuesta más de 2 millones de USD anuales.",
+    "en": "Chile's Internal Revenue Service (SII) administers about 9.5 million properties with appraisals, areas, land uses and geometries, data that are formally public under Law 20,285 but unusable for large-scale analysis because of three technical barriers: a 3 GB fixed-width file, a single-property API with IP blocking, and a WMS service that delivers parcel polygons only as PNG images. The thesis implements a geospatial data engineering pipeline that overcomes all three barriers: parsing of the legacy file, distributed extraction through 30 WireGuard tunnels, download of WMS tiles at zoom 19, raster polygonization with GDAL, filtering by DN value and compactness, and a GeoPandas spatial join based on the base-roll concept. The result is a national dataset of 9.55 million properties across all 343 municipalities, 5.67 million of them (60.3%) with a vector polygon at roughly 30 cm resolution, plus 16 semesters of appraisal history. A validation in Lebu (n = 1,396) shows a median error of 0.4 m between the official coordinate and the polygon centroid. The dataset is distributed through the Catastral.cl platform (FastAPI, PostGIS, React) under a social-payment model and serves as the base layer for a fuel-station site-selection system. The thesis concludes that the barriers are technical rather than legal, and that inaccessibility costs over USD 2 million per year."
+  },
+  "highlights": {
+    "es": [
+      "El pipeline extrajo 9,55 millones de predios de las 343 comunas de Chile en unas 76 horas usando 30 túneles WireGuard con rotación de IP.",
+      "La vectorización raster con GDAL produjo polígonos de unos 30 cm de resolución para 5,67 millones de predios, el 60,3 % del catastro nacional.",
+      "En 1.396 predios de Lebu, el error mediano entre coordenada oficial y centroide fue de 0,4 m, y el 95,6 % quedó bajo 20 m.",
+      "Catastral.cl sirve 9,4 millones de predios y 136 millones de filas históricas con PostGIS, FastAPI y React bajo un modelo de pago social.",
+      "La inaccesibilidad del dato catastral cuesta más de 2 millones de USD anuales, pagados a intermediarios que cobran entre 2.000 y 6.000 USD por comuna."
+    ],
+    "en": [
+      "The pipeline extracted 9.55 million properties from all 343 Chilean municipalities in about 76 hours using 30 WireGuard tunnels with IP rotation.",
+      "Raster vectorization with GDAL produced polygons at roughly 30 cm resolution for 5.67 million properties, 60.3% of the national cadastre.",
+      "Across 1,396 properties in Lebu, the median error between official coordinate and polygon centroid was 0.4 m, with 95.6% under 20 m.",
+      "Catastral.cl serves 9.4 million properties and 136 million historical rows with PostGIS, FastAPI and React under a social-payment model.",
+      "Cadastral data inaccessibility costs over USD 2 million per year, paid to intermediaries charging USD 2,000 to 6,000 per municipality."
+    ]
+  },
+  "keywords": {
+    "es": [
+      "datos abiertos",
+      "datos catastrales",
+      "web scraping",
+      "vectorización raster",
+      "ingeniería de datos geoespaciales",
+      "SII Chile",
+      "mercado inmobiliario"
+    ],
+    "en": [
+      "open data",
+      "cadastral data",
+      "web scraping",
+      "raster vectorization",
+      "geospatial data engineering",
+      "SII Chile",
+      "real estate market"
+    ]
+  },
+  "domain": [
+    "sector público",
+    "finanzas"
+  ],
+  "taskTypes": [
+    "análisis descriptivo e inferencial",
+    "optimización"
+  ],
+  "techniques": [
+    "Web Scraping",
+    "API Harvesting",
+    "Raster Polygonization (GDAL)",
+    "Compactness Index (Isoperimetric Quotient)",
+    "Spatial Join (Point-in-Polygon)",
+    "Nearest-Polygon Matching",
+    "Haversine Distance",
+    "BPR Traffic Model",
+    "CLIP ViT-B/32",
+    "Weighted Scoring Model"
+  ],
+  "tools": [
+    "Python 3.11",
+    "GDAL 3.8",
+    "GeoPandas 0.14",
+    "Rasterio 1.3",
+    "Shapely",
+    "boto3",
+    "WireGuard (Mullvad)",
+    "Linux network namespaces",
+    "Hetzner Object Storage (S3)",
+    "PostgreSQL 16",
+    "PostGIS 3.5",
+    "FastAPI",
+    "Uvicorn",
+    "Nginx",
+    "Cloudflare",
+    "React 19",
+    "Vite 7",
+    "Leaflet",
+    "Recharts",
+    "Docker",
+    "ijson",
+    "QGIS",
+    "Google Routes API",
+    "OpenStreetMap",
+    "HERE Maps"
+  ],
+  "datasets": [
+    {
+      "nameEs": "Rol Semestral de Contribuciones de Bienes Raíces (archivo BRTMPNACROL)",
+      "nameEn": "Semiannual Real Estate Tax Roll (BRTMPNACROL file)",
+      "source": "Servicio de Impuestos Internos (SII), Chile",
+      "public": true,
+      "url": "https://www4.sii.cl/sismunInternet6/?caller=DETALLE_CAT_Y_ROL_COBRO",
+      "sizeNote": "archivo de ancho fijo de unos 3 GB, 117 caracteres por registro, 9,5 millones de predios, versión 2025 semestre 2; 16 semestres históricos 2018-S1 a 2025-S2 (136,6 millones de filas)"
+    },
+    {
+      "nameEs": "API getPredioNacional del SII",
+      "nameEn": "SII getPredioNacional API",
+      "source": "Servicio de Impuestos Internos (SII), Chile",
+      "public": true,
+      "url": null,
+      "sizeNote": "9,55 millones de predios extraídos en 343 comunas, 7,7 GB en CSV, batch marzo 2026"
+    },
+    {
+      "nameEs": "Servicio WMS de cartografía catastral del SII",
+      "nameEn": "SII cadastral WMS map service",
+      "source": "Servicio de Impuestos Internos (SII), Chile",
+      "public": true,
+      "url": "https://www4.sii.cl/mapasui/services/ui/wmsProxyService/call",
+      "sizeNote": "tiles PNG de 256x256 px a zoom 19 (unos 0,3 m/px), 343 GeoTIFFs; 5,67 millones de polígonos vectorizados"
+    },
+    {
+      "nameEs": "Dataset predial nacional consolidado (producto de la tesis)",
+      "nameEn": "Consolidated national property dataset (thesis output)",
+      "source": "Catastral.cl",
+      "public": true,
+      "url": "https://catastral.cl",
+      "sizeNote": "9,55 millones de predios, 5,67 millones con geometría, Parquet y GeoJSON por comuna, unos 18 GB comprimidos"
+    }
+  ],
+  "organization": null,
+  "socialImpact": {
+    "level": "direct",
+    "es": "La tesis aborda directamente un problema de acceso a información pública: libera datos catastrales formalmente públicos pero inaccesibles y los distribuye gratis a investigadores, municipios, periodistas y ciudadanos, reduciendo la asimetría de información en el mercado inmobiliario.",
+    "en": "The thesis directly addresses a public-information access problem: it unlocks cadastral data that are formally public but inaccessible and distributes them free of charge to researchers, municipalities, journalists and citizens, reducing information asymmetry in the real estate market."
+  },
+  "repositoryUrl": null,
+  "notes": "La portada indica 'Borrador Final' (abril 2026). Es una tesis de ingeniería de datos geoespaciales y producto (plataformas Catastral.cl y combustible.tremen.tech), no de modelamiento predictivo: no se entrenan modelos de ML; CLIP se usa como clasificador satelital preentrenado en el caso aplicado. El texto menciona Newmark Chile 'en el Capítulo 1' pero ese contexto no aparece en el documento. Algunas referencias cruzadas de sección son inconsistentes (p.ej. 'Sección 4.2.2' por 7.4.2)."
+}

@@ -1,0 +1,102 @@
+{
+  "id": "2025-sepulveda",
+  "status": "public",
+  "authorization": "INMEDIATO",
+  "student": "Juan Ernesto Osvaldo Sepúlveda Alonso",
+  "cohort": 2023,
+  "program": "MAN WK",
+  "defenseDate": "2025-08-07",
+  "defenseYear": 2025,
+  "advisor": "diaz",
+  "coAdvisor": null,
+  "committee": [
+    "simon",
+    "lizama"
+  ],
+  "title": {
+    "es": "Análisis de recuperación de servicios en el sector de fabricantes de productos alimenticios: un estudio mediante modelos de lenguaje de gran escala",
+    "en": "Service recovery analysis in the food product manufacturing sector: a study using large language models"
+  },
+  "abstract": {
+    "es": "La tesis estudia qué elementos de las respuestas empresariales a reclamos se asocian con mayor satisfacción del consumidor en fabricantes de alimentos de Brasil. Se basa en la teoría de justicia percibida y en la plataforma pública SENACON, que registra reclamo, respuesta y evaluación del consumidor (escala 1 a 5). La base completa comprende 5.465 reclamos del período 2020 a 2024, concentrados en Nescafé Dolce Gusto, Nestlé y Nespresso (70 % del total), y una muestra estratificada de 300 casos fue codificada manualmente por dos expertos como gold standard. Los modelos Gemini y Gemma, en modo zero-shot y con textos traducidos al inglés, puntuaron compensación y empatía en escalas de 0 a 100; Gemini alcanzó 92,7 % de accuracy en compensación (kappa 0,77) y 81,0 % en empatía. Las correlaciones con la satisfacción resultaron prácticamente nulas (r = 0,02 para compensación, r = 0,06 para empatía; diferencia de +0,09 puntos, p = 0,74), por lo que la hipótesis central se rechaza. El tiempo de respuesta muestra un efecto descriptivo y el canal y el tipo de problema moderan la efectividad. El trabajo aporta un protocolo replicable de validación híbrida humano-LLM y evidencia de que la calidad y contextualización de la respuesta importan más que la mera presencia de empatía o compensación.",
+    "en": "This thesis examines which communicational elements of corporate responses to complaints are associated with higher consumer satisfaction in Brazil's food product manufacturing sector. It builds on perceived justice theory (distributive, interactional and procedural) and uses the public SENACON platform (consumidor.gov.br), which records the complaint, the company's response and the consumer's rating on a 1 to 5 scale. The full dataset comprises 5,465 complaints from 2020 to 2024, concentrated in Nescafé Dolce Gusto, Nestlé and Nespresso (70% of the total), and a stratified sample of 300 cases was manually coded by two experts as a gold standard. The Gemini and Gemma models, in zero-shot mode and with texts translated into English, scored compensation and empathy on 0 to 100 scales; Gemini reached 92.7% accuracy on compensation (kappa 0.77) and 81.0% on empathy. Correlations with satisfaction were practically null (r = 0.02 for compensation, r = 0.06 for empathy; a difference of +0.09 points, p = 0.74), so the central hypothesis is rejected. Response time shows a descriptive effect (2.74 to 2.58 points), and sales channel and problem type moderate effectiveness. The work contributes a replicable human-LLM hybrid validation protocol and evidence that response quality and contextualization matter more than the mere presence of empathy or compensation."
+  },
+  "highlights": {
+    "es": [
+      "Se analizaron 5.465 reclamos de fabricantes de alimentos registrados en SENACON entre 2020 y 2024, con 300 casos codificados manualmente como gold standard.",
+      "Gemini en modo zero-shot alcanzó 92,7 % de accuracy y kappa 0,77 en compensación, y 81,0 % de accuracy en empatía frente a codificadores humanos.",
+      "La presencia de compensación o empatía casi no se correlaciona con la satisfacción (r = 0,02 y r = 0,06), rechazando la hipótesis central.",
+      "La satisfacción cae de 2,74 a 2,58 puntos cuando la respuesta demora más de 10 días, aunque la correlación lineal es débil.",
+      "En reclamos de seguridad alimentaria ninguna respuesta fue plenamente transparente; 73,9 % usó comunicación técnica sin asumir responsabilidad y 26,1 % fue evasiva."
+    ],
+    "en": [
+      "5,465 complaints against food manufacturers recorded in SENACON between 2020 and 2024 were analyzed, with 300 cases manually coded as a gold standard.",
+      "Gemini in zero-shot mode reached 92.7% accuracy and kappa 0.77 on compensation, and 81.0% accuracy on empathy against human coders.",
+      "The presence of compensation or empathy is barely correlated with consumer satisfaction (r = 0.02 and r = 0.06), rejecting the central hypothesis.",
+      "Satisfaction falls from 2.74 to 2.58 points when the response takes more than 10 days, although the linear correlation is weak.",
+      "In food safety complaints no response was fully transparent; 73.9% used technical communication without accepting responsibility and 26.1% were evasive."
+    ]
+  },
+  "keywords": {
+    "es": [
+      "recuperación de servicios",
+      "justicia percibida",
+      "modelos de lenguaje de gran escala",
+      "zero-shot learning",
+      "gestión de reclamos",
+      "industria alimentaria",
+      "SENACON"
+    ],
+    "en": [
+      "service recovery",
+      "perceived justice",
+      "large language models",
+      "zero-shot learning",
+      "complaint management",
+      "food industry",
+      "SENACON"
+    ]
+  },
+  "domain": [
+    "alimentos",
+    "servicios"
+  ],
+  "taskTypes": [
+    "NLP / LLMs",
+    "análisis descriptivo e inferencial"
+  ],
+  "techniques": [
+    "Gemini",
+    "Gemma",
+    "Zero-shot LLM classification",
+    "LLM-based machine translation",
+    "Cohen's Kappa",
+    "Pearson correlation",
+    "t-test",
+    "Cohen's d",
+    "Threshold optimization (binarization cutoffs)"
+  ],
+  "tools": [
+    "Google Gemini",
+    "Google Gemma",
+    "Google academic research API access"
+  ],
+  "datasets": [
+    {
+      "nameEs": "Reclamos SENACON, categoría Fabricantes de Productos Alimenticios",
+      "nameEn": "SENACON complaints, Food Product Manufacturers category",
+      "source": "SENACON / Consumidor.gov.br, Ministério da Justiça, Brasil",
+      "public": true,
+      "url": "https://consumidor.gov.br/pages/publicacao/externo/",
+      "sizeNote": "5.465 reclamos, 2020-2024, 41 variables, 27 unidades federativas; submuestra estratificada de 300 casos (julio 2020 a abril 2025) codificada manualmente"
+    }
+  ],
+  "organization": null,
+  "socialImpact": {
+    "level": "indirect",
+    "es": "Usa datos públicos de protección al consumidor y aporta evidencia sobre cómo las empresas gestionan reclamos de seguridad alimentaria, con implicancias para consumidores y regulación, pero el foco es la efectividad empresarial de las respuestas.",
+    "en": "It uses public consumer protection data and provides evidence on how companies handle food safety complaints, with implications for consumers and regulation, but the focus is on the business effectiveness of responses."
+  },
+  "repositoryUrl": "https://repositorio.uchile.cl/handle/2250/207953",
+  "notes": "El texto tiene inconsistencias internas: la síntesis de P4 reporta 720 reclamos de seguridad alimentaria con 45/32/23 % de estrategias y notas 3,4/2,7/2,1, mientras que la sección correspondiente reporta 72 casos, 26,1 % evasivas, 73,9 % técnicas y cero transparentes (se usó esta última versión en los highlights). La base completa aparece como 5.465 y también como 5.468 evaluaciones. Hay párrafos duplicados en la sección de seguridad alimentaria y dos secciones tituladas Conclusiones. El OE5 se cita en la metodología pero no está en la lista de objetivos. No se nombra explícitamente el lenguaje de programación; el anexo muestra prompts en sintaxis tipo Python (SYSTEM_CONTENT = \"\"\"...\"\"\"). Declara uso de Claude, ChatGPT y Gemini para mejorar la redacción."
+}

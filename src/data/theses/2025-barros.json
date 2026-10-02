@@ -1,0 +1,106 @@
+{
+  "id": "2025-barros",
+  "status": "public",
+  "authorization": "INMEDIATO",
+  "student": "Sandra Carolina Barros Henríquez",
+  "cohort": 2023,
+  "program": "MAN WK",
+  "defenseDate": "2025-08-08",
+  "defenseYear": 2025,
+  "advisor": "lizama",
+  "coAdvisor": null,
+  "committee": [
+    "diaz",
+    "simon"
+  ],
+  "title": {
+    "es": "Análisis de las variables que explican eficiencia en establecimientos educacionales de Chile mediante un enfoque híbrido DEA: Machine Learning",
+    "en": "Analysis of the variables that explain efficiency in Chilean schools using a hybrid DEA: Machine Learning approach"
+  },
+  "abstract": {
+    "es": "La tesis estudia qué factores explican la eficiencia técnica de los establecimientos educacionales públicos y subvencionados de Chile, incorporando la convivencia escolar, ausente en los estudios DEA previos. Se toma como variable objetivo la eficiencia continua (entre 0 y 1) estimada en un trabajo anterior con Análisis Envolvente de Datos (DEA) sobre unos 912 establecimientos, y se entrenan modelos de regresión (Random Forest, XGBoost, XGBoost+, MLP y SVM) ajustados con GridSearch. Se realizan dos etapas: primero con las 7 variables de input y output del DEA (razones de profesores de convivencia, lenguaje y matemáticas por alumno, experiencia del equipo de convivencia, SIMCE e IDPS) y luego con 45 variables complementarias seleccionadas por un experto en educación a partir de datos de Mineduc, la Superintendencia de Educación y la encuesta EduInclusiva. XGBoost obtuvo R² de 0,76 con variables DEA y XGBoost+ R² de 0,769 con variables experto. La interpretación con SHAP revela relaciones no lineales, saturación en la dotación docente, un umbral crítico de vulnerabilidad (IVE 0,55 a 0,6), ventaja de los establecimientos subvencionados y urbanos, economías de escala por matrícula y el peso del ambiente de respeto dentro del IDPS. Se confirma la hipótesis de que el enfoque híbrido DEA y machine learning mejora la capacidad explicativa y se derivan siete recomendaciones de política pública.",
+    "en": "This thesis studies which factors explain the technical efficiency of public and state-subsidized schools in Chile, explicitly incorporating school climate (convivencia escolar), a dimension absent from previous DEA studies. The target variable is the continuous efficiency score (between 0 and 1) estimated in an earlier Data Envelopment Analysis (DEA) study covering roughly 912 schools, and regression models (Random Forest, XGBoost, XGBoost+, MLP neural networks and SVM) are trained with GridSearch hyperparameter tuning. Two stages are carried out: first with the 7 DEA input and output variables (ratios of school-climate, language and mathematics teachers per student, experience of the school-climate team, SIMCE scores and IDPS) and then with 45 complementary variables selected by an education expert from Mineduc, the Superintendencia de Educación and the EduInclusiva survey. XGBoost reached an R² of 0.76 with DEA variables and XGBoost+ an R² of 0.769 with expert variables. SHAP interpretation reveals non-linear relationships, saturation in teacher staffing, a critical vulnerability threshold (IVE 0.55 to 0.6), an advantage for subsidized and urban schools, economies of scale from enrollment, and the weight of the respect dimension within the IDPS. The hypothesis that the hybrid DEA and machine learning approach improves explanatory power is confirmed, and seven public policy recommendations are derived."
+  },
+  "highlights": {
+    "es": [
+      "Con las 7 variables del DEA, XGBoost explicó el 76 % de la variabilidad de la eficiencia (R² 0,76, MSE 0,010, MAE 0,08).",
+      "Con 45 variables seleccionadas por un experto en educación, XGBoost+ alcanzó R² 0,769, MSE 0,016 y MAE 0,095 sobre unos 912 establecimientos.",
+      "La razón de profesionales de convivencia por alumno fue la variable más influyente del modelo DEA, con efecto positivo que se satura y revierte.",
+      "Entre las variables experto destacan horas de aula por alumno, dependencia subvencionada, umbral crítico de vulnerabilidad (IVE 0,55 a 0,6), matrícula y zona urbana.",
+      "Al descomponer el IDPS, el ambiente de respeto concentra el efecto de la convivencia, con mejoras solo en puntajes altos; se derivan siete recomendaciones."
+    ],
+    "en": [
+      "Using the 7 DEA variables, XGBoost explained 76% of efficiency variability (R² 0.76, MSE 0.010, MAE 0.08).",
+      "Using 45 variables selected by an education expert, XGBoost+ reached R² 0.769, MSE 0.016 and MAE 0.095 across roughly 912 schools.",
+      "The ratio of school-climate professionals per student was the most influential DEA-model variable, with a positive effect that saturates and then reverses.",
+      "Among expert variables, classroom hours per student, subsidized administration, a critical vulnerability threshold (IVE 0.55 to 0.6), enrollment and urban location stand out.",
+      "Decomposing the IDPS shows the respect dimension concentrates the climate effect, with clear gains only at high scores; seven policy recommendations follow."
+    ]
+  },
+  "keywords": {
+    "es": [
+      "eficiencia escolar",
+      "DEA",
+      "machine learning",
+      "SHAP",
+      "convivencia escolar",
+      "educación pública",
+      "política educativa"
+    ],
+    "en": [
+      "school efficiency",
+      "DEA",
+      "machine learning",
+      "SHAP",
+      "school climate",
+      "public education",
+      "education policy"
+    ]
+  },
+  "domain": [
+    "educación",
+    "sector público"
+  ],
+  "taskTypes": [
+    "regresión",
+    "DEA",
+    "análisis descriptivo e inferencial"
+  ],
+  "techniques": [
+    "DEA",
+    "XGBoost",
+    "Random Forest",
+    "Multilayer Perceptron (MLP)",
+    "Support Vector Regression (SVM)",
+    "SHAP",
+    "Grid Search",
+    "Min-Max Scaling",
+    "One-Hot Encoding",
+    "ANOVA / Kruskal-Wallis"
+  ],
+  "tools": [
+    "Python",
+    "scikit-learn",
+    "Pandas",
+    "NumPy",
+    "Matplotlib"
+  ],
+  "datasets": [
+    {
+      "nameEs": "Eficiencia DEA de establecimientos educacionales chilenos (González, 2024)",
+      "nameEn": "DEA efficiency of Chilean schools (González, 2024)",
+      "source": "Trabajo DEA previo (González, 2024) construido con datos oficiales: SIMCE e IDPS (Mineduc / Agencia de Calidad), IVE, encuesta Mineduc-EduInclusiva y BD Superintendencia de Educación",
+      "public": true,
+      "url": null,
+      "sizeNote": "aprox. 912 establecimientos; 7 variables DEA y 45 variables experto tras preprocesamiento; alrededor del 6 % de los establecimientos con eficiencia igual a 1"
+    }
+  ],
+  "organization": null,
+  "socialImpact": {
+    "level": "direct",
+    "es": "La tesis aborda directamente un problema de política pública educativa: la eficiencia y la equidad de los establecimientos públicos y subvencionados chilenos, incorporando convivencia escolar y vulnerabilidad, y cierra con recomendaciones de política pública.",
+    "en": "The thesis directly addresses an education policy problem: the efficiency and equity of Chilean public and subsidized schools, incorporating school climate and vulnerability, and closes with public policy recommendations."
+  },
+  "repositoryUrl": "https://repositorio.uchile.cl/handle/2250/207928",
+  "notes": "La portada del texto extraído dice 'Determinación de las variables que explican eficiencia en establecimientos educacionales de Chile' (2025, profesora guía Felix Lizama); se usó el título oficial entregado. El resumen ejecutivo es más bien una declaración de objetivos; las cifras provienen de los capítulos de resultados y anexos. El tamaño de la muestra (912) se infiere de la tabla descriptiva del anexo 5 (valores únicos de DMU), no se declara explícitamente. Hay inconsistencias internas sobre el signo del efecto de la razón de horas de aula por alumno: el cuerpo y el anexo 10 lo describen como inverso, mientras el análisis por cuartiles y el anexo 9 lo describen como positivo. Las métricas se denominan 'de clasificación' aunque el problema es de regresión. Más de la mitad del texto son anexos con descripciones de gráficos SHAP."
+}
