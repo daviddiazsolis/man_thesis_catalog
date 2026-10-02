@@ -1,0 +1,103 @@
+{
+  "id": "2026-astudillo",
+  "status": "public",
+  "authorization": "INMEDIATO (confirmado por David Díaz, 2026-10-02)",
+  "student": "Nicolás Andrés Astudillo Molina",
+  "cohort": 2023,
+  "program": "MAN WK",
+  "defenseDate": "2026-08-31",
+  "defenseYear": 2026,
+  "advisor": "diaz",
+  "coAdvisor": null,
+  "committee": [],
+  "title": {
+    "es": "Determinantes sociales del empleo forestal en Chile: un enfoque de machine learning aplicado a datos CASEN 2022",
+    "en": "Social determinants of forestry employment in Chile: a machine learning approach applied to CASEN 2022 data"
+  },
+  "abstract": {
+    "es": "La industria forestal chilena es estratégica para el empleo rural y las exportaciones, pero sus trabajadores enfrentan condiciones precarias, riesgos ocupacionales y brechas de género y etnia. Los estudios previos sobre los determinantes individuales del empleo forestal han descansado en modelos probit, que imponen formas funcionales aditivas y lineales. Esta tesis aplica siete algoritmos de clasificación supervisada (regresión logística, Random Forest, Gradient Boosting, XGBoost, LightGBM, KNN y perceptrón multicapa) sobre 73.676 ocupados de 25 a 65 años de la encuesta CASEN 2022, de los cuales 14.565 (19,8 %) trabajan en el sector forestal. Se comparan dos enfoques: el A replica 19 variables binarias organizadas en cinco dimensiones ESG derivadas de la NCG 461 de la CMF, y el B incorpora 42 variables enriquecidas con región, ruralidad, escolaridad, ingreso logarítmico, tipo de empleo y horas trabajadas. Con partición 70/30 estratificada, submuestreo 50/50 solo en entrenamiento y validación cruzada de cinco pliegues, el enfoque A alcanza un AUC-ROC de 0,751 y el B de 0,875, mejora de +0,124 significativa según intervalos bootstrap al 95 %. Los valores SHAP identifican la escolaridad, el género femenino, el tipo de empleo y el ingreso como determinantes principales, con efectos no lineales en edad y educación. Los resultados aportan una base para focalizar políticas de capacitación, inclusión de género y reportería ESG en el sector.",
+    "en": "The Chilean forestry industry is a strategic sector for rural employment and exports, yet its workers face precarious labor conditions, occupational risks, and gender and ethnic gaps. Previous studies of the individual determinants of forestry employment have relied on probit models, which impose additive and linear functional forms. This thesis applies seven supervised classification algorithms (logistic regression, Random Forest, Gradient Boosting, XGBoost, LightGBM, KNN, and a multilayer perceptron) to 73,676 employed individuals aged 25 to 65 from the CASEN 2022 survey, of whom 14,565 (19.8%) work in the forestry sector. Two approaches are compared: approach A replicates 19 binary variables organized into five ESG dimensions derived from CMF regulation NCG 461, and approach B adds 42 enriched variables including region, rurality, years of schooling, log income, employment type, and hours worked. Using a stratified 70/30 split, 50/50 undersampling applied only to the training set, and five-fold cross-validation, approach A reaches an AUC-ROC of 0.751 and approach B 0.875, a +0.124 improvement that is significant according to 95% bootstrap confidence intervals. SHAP values identify schooling, female gender, employment type, and income as the main determinants, with nonlinear effects of age and education. The results provide a basis for targeting training policies, gender inclusion programs, and ESG reporting in the sector."
+  },
+  "highlights": {
+    "es": [
+      "Siete algoritmos de clasificación se entrenan sobre 73.676 ocupados de la CASEN 2022, de los cuales 14.565 (19,8 %) son trabajadores forestales.",
+      "Con las 19 variables binarias del conjunto base, los siete modelos convergen a un AUC-ROC entre 0,700 y 0,751, poder predictivo moderado.",
+      "Con 42 variables enriquecidas, el Gradient Boosting alcanza un AUC-ROC de 0,875, mejora de +0,124 con intervalos bootstrap al 95 % sin solapamiento.",
+      "La regresión logística sube de 0,735 a 0,846 de AUC con las mismas variables: la mejora proviene de la información, no de la complejidad algorítmica.",
+      "SHAP con LightGBM sitúa la escolaridad (0,503), el género femenino (0,455) y el tipo de empleo (0,332) como determinantes principales, con edad en U invertida."
+    ],
+    "en": [
+      "Seven classification algorithms are trained on 73,676 employed individuals from CASEN 2022, of whom 14,565 (19.8%) are forestry workers.",
+      "With the 19 binary variables of the base set, all seven models converge to an AUC-ROC between 0.700 and 0.751, moderate predictive power.",
+      "With 42 enriched variables, Gradient Boosting reaches an AUC-ROC of 0.875, a +0.124 improvement with non-overlapping 95% bootstrap confidence intervals.",
+      "Logistic regression rises from 0.735 to 0.846 AUC with the same variables: the gain comes from the added information, not algorithmic complexity.",
+      "SHAP with LightGBM ranks schooling (0.503), female gender (0.455), and employment type (0.332) as the main determinants, with an inverted U effect of age."
+    ]
+  },
+  "keywords": {
+    "es": [
+      "empleo forestal",
+      "determinantes sociales",
+      "CASEN 2022",
+      "machine learning",
+      "SHAP",
+      "ESG",
+      "clasificación binaria"
+    ],
+    "en": [
+      "forestry employment",
+      "social determinants",
+      "CASEN 2022",
+      "machine learning",
+      "SHAP",
+      "ESG",
+      "binary classification"
+    ]
+  },
+  "domain": [
+    "industria",
+    "sector público"
+  ],
+  "taskTypes": [
+    "clasificación"
+  ],
+  "techniques": [
+    "Logistic Regression",
+    "Random Forest",
+    "Gradient Boosting",
+    "XGBoost",
+    "LightGBM",
+    "K-Nearest Neighbors",
+    "Multilayer Perceptron",
+    "SHAP",
+    "Stratified K-Fold Cross-Validation",
+    "Bootstrap Confidence Intervals"
+  ],
+  "tools": [
+    "Python",
+    "scikit-learn",
+    "XGBoost",
+    "LightGBM",
+    "TensorFlow/Keras",
+    "SHAP"
+  ],
+  "datasets": [
+    {
+      "nameEs": "Encuesta CASEN 2022",
+      "nameEn": "CASEN 2022 survey",
+      "source": "CASEN 2022, Ministerio de Desarrollo Social y Familia (Centro de Encuestas y Estudios Longitudinales)",
+      "public": true,
+      "url": null,
+      "sizeNote": "73.676 ocupados de 25 a 65 años sin factores de expansión; 14.565 (19,8 %) trabajadores forestales según rama1 (códigos 2, 16 y 17); 19 variables en el enfoque A y 42 en el enfoque B"
+    }
+  ],
+  "organization": null,
+  "socialImpact": {
+    "level": "direct",
+    "es": "La tesis aborda directamente un problema de empleo y equidad: identifica las barreras de género, educación y territorio que condicionan el acceso al trabajo forestal y propone focalizar políticas públicas de capacitación, inclusión de género y reportería ESG en el sector.",
+    "en": "The thesis directly addresses an employment and equity problem: it identifies the gender, education, and territorial barriers that shape access to forestry work and proposes targeting public policies on training, gender inclusion, and ESG reporting in the sector."
+  },
+  "repositoryUrl": null,
+  "pdfUrl": "/pdf/2026-astudillo.pdf",
+  "notes": "El texto extraído coloca las tablas (métricas, intervalos bootstrap, importancia SHAP, variables del enfoque B) al final del archivo, después de la bibliografía. El texto contiene una inconsistencia menor: en la sección 6.1.4 y en la Tabla 8 la escolaridad es la variable más importante (mediana de |SHAP| 0,503) y el tipo de empleo ocupa el tercer lugar, pero en 6.2.5 y en la Tabla 11 se describe el tipo de empleo como la variable más importante. El modelo de mayor AUC en el enfoque B es Gradient Boosting (0,875), pero el análisis SHAP usa LightGBM (0,874) por compatibilidad con TreeExplainer. La tesis se vincula a un artículo previo del alumno con enfoque probit (Alvear y Astudillo, 2025, Forest Policy and Economics). Los hiperparámetros se fijaron sin búsqueda sistemática. Año de la memoria: 2026."
+}

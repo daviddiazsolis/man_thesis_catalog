@@ -19,12 +19,14 @@ Cuando una pasa a publicable: correr `gen/nueva_tesis.py` con su PDF/DOCX y segu
 | Emilia Toledo Matte | Estimación de la demanda de conexiones NB-IoT | Sebastián Maldonado | 2026-07-08 |
 | Bastián Valenzuela Benassi | Predicción y estrategia en la compra de materias primas: modelo data-driven para el aceite de soja en la salmonicultura chilena | David Díaz | 2025-08-08 |
 
+## Ya publicadas tras confirmación directa
+| Nicolás Astudillo Molina | Determinantes sociales del empleo forestal en Chile | David Díaz | 2026-08-31 | confirmado por David el 2026-10-02 |
+
 ## Sin dato de autorización todavía (formulario pendiente o en proceso)
 | Alumno/a | Título | Guía | Defensa |
 |---|---|---|---|
 | Luis Acuña Herrera | Enfoque analítico predictivo para estimar el riesgo de eliminación académica en una facultad de economía y negocios | Jaime Miranda | 2026-08-27 |
 | Marcelo Adaro González | Modelos predictivos para la optimización del P80 en molienda secundaria mediante controlador MPC | Rafael Epstein | pendiente |
-| Nicolás Astudillo Molina | Determinantes sociales del empleo forestal en Chile: ML aplicado a datos CASEN 2022 | David Díaz | 2026-08-31 |
 | María Loreto Jiménez Araya | Análisis del impacto de la mineralogía en la recuperación de agua en el espesamiento de relaves | Richard Weber | pendiente |
 | Eduardo Vasconcello Silva | Predecir pagos de cajeros automáticos | Richard Weber | 2026-09-02 |
 | Juan Ignacio Paredes | (hay PDF en la carpeta TESIS pero no aparece en el Excel de autorizaciones) | | |

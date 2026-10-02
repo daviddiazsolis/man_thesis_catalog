@@ -50,6 +50,8 @@ export const translations: Record<Language, TMap> = {
     committeeLabel: 'Comisión', viewDetail: 'Ver ficha', repoLink: 'Ver en repositorio U. de Chile', repoPending: 'Aún no cargada en el repositorio',
     repoSearch: 'Buscar en el repositorio',
     downloadPdf: 'Descargar el documento completo (PDF)', downloadShort: 'PDF',
+    shareLabel: 'Compartir', shareTag: 'Tesis del Magíster en Analítica de Negocios, Universidad de Chile', shareNative: 'Más opciones',
+    shareHint: 'Instagram no admite compartir enlaces desde la web: copia el enlace y pégalo en tu historia o biografía, o usa "Más opciones" desde el celular.',
 
     abstractLabel: 'Resumen ejecutivo', highlightsLabel: 'Highlights', datasetsLabel: 'Datasets', techniquesLabel: 'Técnicas y modelos',
     toolsLabel: 'Herramientas', keywordsLabel: 'Palabras clave', impactLabel: 'Impacto social', organizationLabel: 'Organización',
@@ -103,6 +105,8 @@ export const translations: Record<Language, TMap> = {
     committeeLabel: 'Committee', viewDetail: 'View details', repoLink: 'View in U. de Chile repository', repoPending: 'Not yet available in the repository',
     repoSearch: 'Search the repository',
     downloadPdf: 'Download the full document (PDF)', downloadShort: 'PDF',
+    shareLabel: 'Share', shareTag: 'Master in Business Analytics thesis, Universidad de Chile', shareNative: 'More options',
+    shareHint: 'Instagram does not accept link sharing from the web: copy the link and paste it in your story or bio, or use "More options" on mobile.',
 
     abstractLabel: 'Executive summary', highlightsLabel: 'Highlights', datasetsLabel: 'Datasets', techniquesLabel: 'Techniques and models',
     toolsLabel: 'Tools', keywordsLabel: 'Keywords', impactLabel: 'Social impact', organizationLabel: 'Organization',

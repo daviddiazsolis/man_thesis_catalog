@@ -7,6 +7,7 @@ import { domainLabel, taskLabel } from '../i18n'
 import { repositorySearchUrl, type Thesis, type Lang } from '../data'
 import AdvisorLink from './AdvisorLink'
 import ImpactBadge from './ImpactBadge'
+import ShareBar from './ShareBar'
 
 function Section({ icon: Icon, title, children }: { icon: React.ElementType; title: string; children: React.ReactNode }) {
   return (
@@ -54,7 +55,8 @@ export default function ThesisDetail({ thesis: th, onClose }: { thesis: Thesis; 
             </div>
           </div>
           <h2 className="text-xl sm:text-2xl font-bold leading-snug mt-3">{th.title[textLang]}</h2>
-          <p className="text-sm text-white/80 mt-2">{t('studentLabel')}: <span className="text-white font-medium">{th.student}</span></p>
+          <p className="mt-3 text-lg sm:text-xl font-bold text-fen-gold">{th.student}</p>
+          <p className="text-xs text-white/70 mt-0.5">{t('studentLabel')} · {t('cohortShort')} {th.cohort}</p>
           <div className="flex flex-wrap items-center gap-2 mt-4">
             <ImpactBadge level={th.socialImpact.level} />
             {th.domain.map(d => <span key={d} className="text-[11px] px-2 py-0.5 rounded-md bg-white/15 text-white font-medium">{domainLabel(d, language)}</span>)}
@@ -103,6 +105,8 @@ export default function ThesisDetail({ thesis: th, onClose }: { thesis: Thesis; 
             <Section icon={Building2} title={t('impactLabel')}>
               <p className="text-sm text-fg-2 leading-relaxed">{th.socialImpact[textLang]}</p>
             </Section>
+
+            <ShareBar id={th.id} title={th.title[textLang]} />
           </div>
 
           <aside className="space-y-6">

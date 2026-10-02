@@ -21,8 +21,9 @@ export default function ThesisCard({ thesis: th, onOpen }: { thesis: Thesis; onO
       </div>
 
       <h3 className="font-bold text-fg leading-snug mb-2 group-hover:text-accent transition-colors">{th.title[language]}</h3>
-      <p className="text-sm text-muted mb-3">
-        {th.student} · <span className="text-fg-2">{t('advisorLabel')}:</span> <AdvisorLink id={th.advisor} />
+      <p className="text-base font-semibold text-fg mb-0.5">{th.student}</p>
+      <p className="text-xs text-muted mb-3">
+        {t('advisorLabel')}: <AdvisorLink id={th.advisor} />
         {th.coAdvisor && <> · <AdvisorLink id={th.coAdvisor} /></>}
       </p>
 

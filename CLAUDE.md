@@ -6,7 +6,13 @@ Colores FEN (tomados de fen.uchile.cl): azul `#0034d9`, azul profundo `#0d0b70`,
 
 ## Logos
 
-`public/logos/` contiene los logos oficiales descargados de fen.uchile.cl (`fen.svg`), dii.uchile.cl (`dii_dark.svg`, versión con relleno azul profundo del SVG original blanco) y el de la FCFM que usa el DII (`fcfm.png`, baja resolución: reemplazar por un SVG oficial si se consigue). Se muestran en el hero y en el footer sobre una tarjeta blanca (`src/components/Logos.tsx`).
+`public/logos/` contiene los logos oficiales de las dos facultades: FEN (`fen.svg`, de fen.uchile.cl) y FCFM (`fcfm.png`, el que usa dii.uchile.cl; baja resolución, reemplazar por un SVG oficial si se consigue). Se muestran en el hero y en el footer sobre una tarjeta blanca (`src/components/Logos.tsx`). El logo del DII se quitó a pedido de David (queda `dii_dark.svg` sin usar; se puede borrar).
+
+Los profesores FEN se enlazan a su ficha del directorio oficial (`https://fen.uchile.cl/es/academicos-investigacion/directorio-de-academicos/detalle/<nombre-apellido>`); los del DII a `dii.uchile.cl/quien/<nombre-apellido>/`.
+
+## Compartir
+
+`src/components/ShareBar.tsx` (LinkedIn, X, WhatsApp, Facebook, correo, copiar enlace y Web Share API para el menú nativo del celular, que es la única vía para Instagram). Los enlaces usan el deep link `#tesis=<id>`. Las previsualizaciones usan los meta Open Graph de `index.html` y la imagen `public/og.png` (1200x630): como el sitio es estático, la previsualización es la misma para todas las tesis.
 
 ## Estructura
 
